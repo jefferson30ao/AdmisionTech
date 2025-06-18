@@ -1,0 +1,23 @@
+# C++
+*.o
+*.d
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+venv/
+*.egg-info/
+
+# VS Code
+.vscode/
+.DS_Store
+
+# Otros
+/data/
+/resultados.csv
+/logs/
