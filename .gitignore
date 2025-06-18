@@ -19,5 +19,6 @@ venv/
 
 # Otros
 /data/
+/docs/
 /resultados.csv
 /logs/
