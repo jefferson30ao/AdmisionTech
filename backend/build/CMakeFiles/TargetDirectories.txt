@@ -1,0 +1,5 @@
+C:/Users/jefy_/Downloads/AdmisionTech/backend/build/CMakeFiles/evalcore.dir
+C:/Users/jefy_/Downloads/AdmisionTech/backend/build/CMakeFiles/test_serial.dir
+C:/Users/jefy_/Downloads/AdmisionTech/backend/build/CMakeFiles/test.dir
+C:/Users/jefy_/Downloads/AdmisionTech/backend/build/CMakeFiles/edit_cache.dir
+C:/Users/jefy_/Downloads/AdmisionTech/backend/build/CMakeFiles/rebuild_cache.dir

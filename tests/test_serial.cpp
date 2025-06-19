@@ -3,6 +3,8 @@
 #include "evaluator.hpp"
 #include <cassert>
 
+using namespace exam; // Add this line to use the exam namespace
+
 TEST(SerialTest, Correct) {
     int8_t answers[15] = {
         1, 2, 3, 4, 1,
