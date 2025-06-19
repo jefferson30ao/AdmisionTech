@@ -22,3 +22,4 @@ venv/
 /docs/
 /resultados.csv
 /logs/
+/googletest/

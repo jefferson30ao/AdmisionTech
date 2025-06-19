@@ -1,10 +1,10 @@
-#include "evaluator.hpp"
+#include "../include/evaluator.hpp"
 
 namespace exam {
 
 void evaluate_serial(const int8_t* answers, size_t num_students, const int8_t* key, ScoringRule rule, Result* out) {
     for (size_t i = 0; i < num_students; ++i) {
-        uint32_t score = 0;
+        double score = 0.0;
         uint32_t correct = 0;
         uint32_t wrong = 0;
         uint32_t blank = 0;

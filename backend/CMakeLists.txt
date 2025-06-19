@@ -26,3 +26,4 @@ target_link_libraries(test_serial PRIVATE GTest::gtest_main GTest::gtest)
 target_include_directories(test_serial PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../googletest/include)
 
 add_test(NAME serial_test COMMAND test_serial)
+add_subdirectory(bindings/py)

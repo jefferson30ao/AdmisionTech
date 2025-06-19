@@ -13,7 +13,7 @@ struct ScoringRule {
 };
 
 struct Result {
-    uint32_t score;
+    double score;
     uint32_t correct;
     uint32_t wrong;
     uint32_t blank;
