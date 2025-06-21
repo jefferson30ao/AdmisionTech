@@ -15,7 +15,7 @@ class BuildExt(_build_ext):
 ext_modules = [
     Pybind11Extension(
         "pyevalcore",
-        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp"],
+        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp", "../../src/evaluator_openmp.cpp"],
         include_dirs=[pybind11.get_include(), "../../include"],
         language="c++",
     ),

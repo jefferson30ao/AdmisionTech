@@ -19,7 +19,10 @@ struct Result {
     uint32_t blank;
 };
 
+enum class Mode { Serial, OpenMP };
+
 void evaluate_serial(const int8_t* answers, size_t num_students, const int8_t* key, ScoringRule rule, Result* out);
+void evaluate_openmp(const int8_t* answers, size_t num_students, const int8_t* key, ScoringRule rule, Result* out);
 
 } // namespace exam
 

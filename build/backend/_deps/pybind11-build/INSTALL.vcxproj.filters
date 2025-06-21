@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\CMakeFiles\dd37f355b4598c28e22c086e7dca1f64\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2162680A-F605-3C48-B252-AA9709EF607A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
