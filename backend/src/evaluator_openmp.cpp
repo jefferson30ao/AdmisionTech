@@ -3,7 +3,7 @@
 
 namespace exam {
 
-void evaluate_openmp(const int8_t* answers, size_t num_students, const int8_t* key, ScoringRule rule, Result* out) {
+void evaluate_openmp(const int8_t* answers, size_t num_students, const int8_t* key, size_t num_questions, ScoringRule rule, Result* out) {
     #pragma omp parallel for schedule(dynamic, 64)
     for (ptrdiff_t i = 0; i < static_cast<ptrdiff_t>(num_students); ++i) {
         double score = 0;
@@ -11,16 +11,16 @@ void evaluate_openmp(const int8_t* answers, size_t num_students, const int8_t* k
         uint32_t wrong = 0;
         uint32_t blank = 0;
 
-        for (size_t j = 0; j < 100; ++j) {
-            int8_t answer = answers[i * 100 + j];
-            if (answer == key[j]) {
-                score += rule.correct;
-                correct++;
-            } else if (answer == -1) {
+        for (size_t j = 0; j < num_questions; ++j) {
+            int8_t answer = answers[i * num_questions + j];
+            if (answer == -1) {
                 blank++;
-            } else {
-                score += rule.wrong;
+            } else if (answer == key[j]) {  // Respuesta coincide con clave
+                correct++;
+                score += rule.correct;
+            } else if (answer >= 0 && answer <= 3) {  // Respuesta no coincide (0-3)
                 wrong++;
+                score += rule.wrong;
             }
         }
 

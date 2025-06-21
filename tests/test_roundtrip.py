@@ -7,7 +7,8 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from frontend.validation import validate_and_load_responses, validate_and_load_answer_key
-from frontend.bridge import run_serial
+import pyevalcore
+from frontend.bridge import run_serial, run_openmp
 
 def create_dummy_excel_files():
     """Crea archivos Excel dummy para respuestas y clave de respuestas."""
@@ -182,58 +183,60 @@ class TestEvalCore(unittest.TestCase):
         self.assertEqual(result.blank, 4)
 
     def test_evaluate_serial(self):
-        answers = np.array([[1, 2, 3, 4, 1], [1, 2, 3, 4, 1], [1, 2, 3, 4, 1]], dtype=np.int8)
-        key = np.array([1, 2, 3, 4, 1], dtype=np.int8)
+        # 0=correcta, 1-3=incorrectas, -1=blanco
+        answers = np.array([[0, 1, 2, 3, 0], [0, 1, 2, 3, 0], [0, 1, 2, 3, 0]], dtype=np.int8)
+        key = np.array([0, 1, 2, 3, 0], dtype=np.int8)
         rule = pyevalcore.ScoringRule()
-        rule.correct = 1
-        rule.wrong = 0
+        rule.correct = 20
+        rule.wrong = -1.125
         rule.blank = 0
 
         results = pyevalcore.run_serial(answers, key, rule)
 
         self.assertEqual(len(results), 3)
-        self.assertEqual(results[0]['correct'], 5)
-        self.assertEqual(results[0]['wrong'], 0)
+        self.assertEqual(results[0]['correct'], 5)  # Todas las respuestas coinciden con la clave
+        self.assertEqual(results[0]['wrong'], 0)    # Ninguna respuesta incorrecta
         self.assertEqual(results[0]['blank'], 0)
-        self.assertEqual(results[0]['score'], 5)
+        self.assertEqual(results[0]['score'], 100)    # 5*20 + 0*-1.125
 
         self.assertEqual(results[1]['correct'], 5)
         self.assertEqual(results[1]['wrong'], 0)
         self.assertEqual(results[1]['blank'], 0)
-        self.assertEqual(results[1]['score'], 5)
+        self.assertEqual(results[1]['score'], 100)
 
 
         self.assertEqual(results[2]['correct'], 5)
         self.assertEqual(results[2]['wrong'], 0)
         self.assertEqual(results[2]['blank'], 0)
-        self.assertEqual(results[2]['score'], 5)
+        self.assertEqual(results[2]['score'], 100)
 
     def test_evaluate_openmp(self):
-        answers = np.array([[1, 2, 3, 4, 1], [1, 2, 3, 4, 1], [1, 2, 3, 4, 1]], dtype=np.int8)
-        key = np.array([1, 2, 3, 4, 1], dtype=np.int8)
+        # 0=correcta, 1-3=incorrectas, -1=blanco
+        answers = np.array([[0, 1, 2, 3, 0], [0, 1, 2, 3, 0], [0, 1, 2, 3, 0]], dtype=np.int8)
+        key = np.array([0, 1, 2, 3, 0], dtype=np.int8)
         rule = pyevalcore.ScoringRule()
-        rule.correct = 1
-        rule.wrong = 0
+        rule.correct = 20
+        rule.wrong = -1.125
         rule.blank = 0
 
         results = pyevalcore.run_openmp(answers, key, rule)
 
         self.assertEqual(len(results), 3)
-        self.assertEqual(results[0]['correct'], 5)
-        self.assertEqual(results[0]['wrong'], 0)
+        self.assertEqual(results[0]['correct'], 5)  # Todas las respuestas coinciden con la clave
+        self.assertEqual(results[0]['wrong'], 0)    # Ninguna respuesta incorrecta
         self.assertEqual(results[0]['blank'], 0)
-        self.assertEqual(results[0]['score'], 5)
+        self.assertEqual(results[0]['score'], 100)    # 5*20 + 0*-1.125
 
         self.assertEqual(results[1]['correct'], 5)
         self.assertEqual(results[1]['wrong'], 0)
         self.assertEqual(results[1]['blank'], 0)
-        self.assertEqual(results[1]['score'], 5)
+        self.assertEqual(results[1]['score'], 100)
 
 
         self.assertEqual(results[2]['correct'], 5)
         self.assertEqual(results[2]['wrong'], 0)
         self.assertEqual(results[2]['blank'], 0)
-        self.assertEqual(results[2]['score'], 5)
+        self.assertEqual(results[2]['score'], 100)
 
 if __name__ == "__main__":
     #test_round_trip()

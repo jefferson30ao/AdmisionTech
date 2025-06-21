@@ -41,7 +41,7 @@ PYBIND11_MODULE(pyevalcore, m) {
         const int8_t* key_ptr = static_cast<int8_t*>(key_buf.ptr);
 
         std::vector<exam::Result> results(num_students);
-        exam::evaluate_serial(answers_ptr, num_students, key_ptr, rule, results.data());
+        exam::evaluate_serial(answers_ptr, num_students, key_ptr, num_questions, rule, results.data());
 
         // Convert results to a list of dictionaries for easier DataFrame conversion in Python
         py::list py_results;
@@ -75,7 +75,7 @@ PYBIND11_MODULE(pyevalcore, m) {
         const int8_t* key_ptr = static_cast<int8_t*>(key_buf.ptr);
 
         std::vector<exam::Result> results(num_students);
-        exam::evaluate_openmp(answers_ptr, num_students, key_ptr, rule, results.data());
+        exam::evaluate_openmp(answers_ptr, num_students, key_ptr, num_questions, rule, results.data());
 
         // Convert results to a list of dictionaries for easier DataFrame conversion in Python
         py::list py_results;
