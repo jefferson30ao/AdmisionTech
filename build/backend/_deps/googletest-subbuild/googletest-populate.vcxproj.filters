@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\f362c00c44198f0df6e090407cb5491a\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\fbe9b63003247ae347c7e1add6aa5ca6\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\a423859920f8cbff2cd4569ace0487d4\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\jefy_\Downloads\AdmisionTech\build\backend\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D76DC8EF-001D-31EF-AED4-D4E5C18D52C2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

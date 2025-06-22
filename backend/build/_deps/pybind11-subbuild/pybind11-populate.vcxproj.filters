@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\7b6604ed03c295945b1416cd20041c65\pybind11-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\84fb0a3ff74447baf94620734a5da5f0\pybind11-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\d2dfa27c48b15edd0510ffe874bdb6d6\pybind11-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\_deps\pybind11-subbuild\CMakeFiles\pybind11-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{90FC7541-E60E-32CE-ADE9-CF6D3BDDBBB1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,7 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/jefy_/Downloads/AdmisionTech/backend/build/cmake_install.cmake"
+		"C:/Users/jefy_/Downloads/AdmisionTech/backend/build/cmake_install.cmake",
+		"C:/Users/jefy_/Downloads/AdmisionTech/backend/build/bindings/py/cmake_install.cmake",
+		"C:/Users/jefy_/Downloads/AdmisionTech/backend/build/_deps/pybind11-build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

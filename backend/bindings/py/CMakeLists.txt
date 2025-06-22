@@ -14,6 +14,7 @@ FetchContent_MakeAvailable(pybind11)
 pybind11_add_module(pyevalcore
   pyevalcore_binding.cpp
   ../../src/evaluator_serial.cpp
+  ../../src/evaluator_openmp.cpp
 )
 
 target_include_directories(pyevalcore PRIVATE ${Python3_INCLUDE_DIRS})
