@@ -1,0 +1,1475 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+      Compilaci├│n iniciada a las 24/06/2025 21:46:17.
+      
+      Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdC\\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
+      PrepareForBuild:
+        Creando directorio "Debug\\".
+        La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+        Creando directorio "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Se crear├í "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Se eliminar├í el archivo "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdC\\CompilerIdC.vcxproj" (destinos predeterminados).
+      
+      Compilaci├│n correcta.
+          0 Advertencia(s)
+          0 Errores
+      
+      Tiempo transcurrido 00:00:00.54
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+      Compilaci├│n iniciada a las 24/06/2025 21:46:18.
+      
+      Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
+      PrepareForBuild:
+        Creando directorio "Debug\\".
+        La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+        Creando directorio "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Se crear├í "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Se eliminar├í el archivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos predeterminados).
+      
+      Compilaci├│n correcta.
+          0 Advertencia(s)
+          0 Errores
+      
+      Tiempo transcurrido 00:00:00.48
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-m63e7t"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-m63e7t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-m63e7t'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_776f1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:19.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m63e7t\\cmTC_776f1.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_776f1.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m63e7t\\Debug\\".
+          Creando directorio "cmTC_776f1.dir\\Debug\\cmTC_776f1.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_776f1.dir\\Debug\\cmTC_776f1.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_776f1.dir\\Debug\\cmTC_776f1.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_776f1.dir\\Debug\\\\" /Fd"cmTC_776f1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_776f1.dir\\Debug\\\\" /Fd"cmTC_776f1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m63e7t\\Debug\\cmTC_776f1.exe" /INCREMENTAL /ILK:"cmTC_776f1.dir\\Debug\\cmTC_776f1.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-m63e7t/Debug/cmTC_776f1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-m63e7t/Debug/cmTC_776f1.lib" /MACHINE:X64  /machine:x64 cmTC_776f1.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_776f1.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m63e7t\\Debug\\cmTC_776f1.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_776f1.dir\\Debug\\cmTC_776f1.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_776f1.dir\\Debug\\cmTC_776f1.tlog\\cmTC_776f1.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m63e7t\\cmTC_776f1.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.47
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35211.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9giamj"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9giamj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9giamj'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_abe1e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:19.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9giamj\\cmTC_abe1e.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_abe1e.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9giamj\\Debug\\".
+          Creando directorio "cmTC_abe1e.dir\\Debug\\cmTC_abe1e.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_abe1e.dir\\Debug\\cmTC_abe1e.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_abe1e.dir\\Debug\\cmTC_abe1e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_abe1e.dir\\Debug\\\\" /Fd"cmTC_abe1e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_abe1e.dir\\Debug\\\\" /Fd"cmTC_abe1e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9giamj\\Debug\\cmTC_abe1e.exe" /INCREMENTAL /ILK:"cmTC_abe1e.dir\\Debug\\cmTC_abe1e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9giamj/Debug/cmTC_abe1e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9giamj/Debug/cmTC_abe1e.lib" /MACHINE:X64  /machine:x64 cmTC_abe1e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_abe1e.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9giamj\\Debug\\cmTC_abe1e.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_abe1e.dir\\Debug\\cmTC_abe1e.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_abe1e.dir\\Debug\\cmTC_abe1e.tlog\\cmTC_abe1e.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9giamj\\cmTC_abe1e.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.47
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35211.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-4kde7h"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-4kde7h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-4kde7h'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f9e78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:27.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\cmTC_f9e78.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_f9e78.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\Debug\\".
+          Creando directorio "cmTC_f9e78.dir\\Debug\\cmTC_f9e78.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_f9e78.dir\\Debug\\cmTC_f9e78.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_f9e78.dir\\Debug\\cmTC_f9e78.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9e78.dir\\Debug\\\\" /Fd"cmTC_f9e78.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\src.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9e78.dir\\Debug\\\\" /Fd"cmTC_f9e78.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\src.c"
+          src.c
+        C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\src.c(1,10): error C1083: No se puede abrir el archivo incluir: 'pthread.h': No such file or directory [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\cmTC_f9e78.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\cmTC_f9e78.vcxproj" (destinos predeterminados) -- ERROR.
+        
+        ERROR al compilar.
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\cmTC_f9e78.vcxproj" (destino predeterminado) (1) ->
+        (ClCompile destino) -> 
+          C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\src.c(1,10): error C1083: No se puede abrir el archivo incluir: 'pthread.h': No such file or directory [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4kde7h\\cmTC_f9e78.vcxproj]
+        
+            0 Advertencia(s)
+            1 Errores
+        
+        Tiempo transcurrido 00:00:00.41
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-3zirtw"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-3zirtw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-3zirtw'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_15140.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:28.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\cmTC_15140.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_15140.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\Debug\\".
+          Creando directorio "cmTC_15140.dir\\Debug\\cmTC_15140.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_15140.dir\\Debug\\cmTC_15140.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_15140.dir\\Debug\\cmTC_15140.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15140.dir\\Debug\\\\" /Fd"cmTC_15140.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\CheckFunctionExists.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15140.dir\\Debug\\\\" /Fd"cmTC_15140.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\Debug\\cmTC_15140.exe" /INCREMENTAL /ILK:"cmTC_15140.dir\\Debug\\cmTC_15140.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-3zirtw/Debug/cmTC_15140.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-3zirtw/Debug/cmTC_15140.lib" /MACHINE:X64  /machine:x64 cmTC_15140.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: no se puede abrir el archivo 'pthreads.lib' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\cmTC_15140.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\cmTC_15140.vcxproj" (destinos predeterminados) -- ERROR.
+        
+        ERROR al compilar.
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\cmTC_15140.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: no se puede abrir el archivo 'pthreads.lib' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3zirtw\\cmTC_15140.vcxproj]
+        
+            0 Advertencia(s)
+            1 Errores
+        
+        Tiempo transcurrido 00:00:00.47
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-22kp2c"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-22kp2c"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-22kp2c'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8645b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:28.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\cmTC_8645b.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_8645b.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\Debug\\".
+          Creando directorio "cmTC_8645b.dir\\Debug\\cmTC_8645b.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_8645b.dir\\Debug\\cmTC_8645b.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_8645b.dir\\Debug\\cmTC_8645b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8645b.dir\\Debug\\\\" /Fd"cmTC_8645b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\CheckFunctionExists.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8645b.dir\\Debug\\\\" /Fd"cmTC_8645b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\Debug\\cmTC_8645b.exe" /INCREMENTAL /ILK:"cmTC_8645b.dir\\Debug\\cmTC_8645b.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-22kp2c/Debug/cmTC_8645b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-22kp2c/Debug/cmTC_8645b.lib" /MACHINE:X64  /machine:x64 cmTC_8645b.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: no se puede abrir el archivo 'pthread.lib' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\cmTC_8645b.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\cmTC_8645b.vcxproj" (destinos predeterminados) -- ERROR.
+        
+        ERROR al compilar.
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\cmTC_8645b.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: no se puede abrir el archivo 'pthread.lib' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22kp2c\\cmTC_8645b.vcxproj]
+        
+            0 Advertencia(s)
+            1 Errores
+        
+        Tiempo transcurrido 00:00:00.45
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:46 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-n93044"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-n93044"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-n93044'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_58adc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:29.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\cmTC_58adc.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_58adc.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\Debug\\".
+          Creando directorio "cmTC_58adc.dir\\Debug\\cmTC_58adc.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_58adc.dir\\Debug\\cmTC_58adc.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_58adc.dir\\Debug\\cmTC_58adc.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_58adc.dir\\Debug\\\\" /Fd"cmTC_58adc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\OpenMPTryFlag.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_58adc.dir\\Debug\\\\" /Fd"cmTC_58adc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\OpenMPTryFlag.c"
+          OpenMPTryFlag.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\Debug\\cmTC_58adc.exe" /INCREMENTAL /ILK:"cmTC_58adc.dir\\Debug\\cmTC_58adc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-n93044/Debug/cmTC_58adc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-n93044/Debug/cmTC_58adc.lib" /MACHINE:X64  /machine:x64 cmTC_58adc.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_58adc.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\Debug\\cmTC_58adc.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_58adc.dir\\Debug\\cmTC_58adc.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_58adc.dir\\Debug\\cmTC_58adc.tlog\\cmTC_58adc.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n93044\\cmTC_58adc.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.49
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:46 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-br9xuq"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-br9xuq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-br9xuq'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_008f7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:30.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\cmTC_008f7.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_008f7.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\Debug\\".
+          Creando directorio "cmTC_008f7.dir\\Debug\\cmTC_008f7.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_008f7.dir\\Debug\\cmTC_008f7.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_008f7.dir\\Debug\\cmTC_008f7.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++17 /Fo"cmTC_008f7.dir\\Debug\\\\" /Fd"cmTC_008f7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\OpenMPTryFlag.cpp"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++17 /Fo"cmTC_008f7.dir\\Debug\\\\" /Fd"cmTC_008f7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\OpenMPTryFlag.cpp"
+          OpenMPTryFlag.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\Debug\\cmTC_008f7.exe" /INCREMENTAL /ILK:"cmTC_008f7.dir\\Debug\\cmTC_008f7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-br9xuq/Debug/cmTC_008f7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-br9xuq/Debug/cmTC_008f7.lib" /MACHINE:X64  /machine:x64 cmTC_008f7.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_008f7.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\Debug\\cmTC_008f7.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_008f7.dir\\Debug\\cmTC_008f7.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_008f7.dir\\Debug\\cmTC_008f7.tlog\\cmTC_008f7.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-br9xuq\\cmTC_008f7.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.48
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:46 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-sqqa1g"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-sqqa1g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-sqqa1g'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d3f08.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:30.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\cmTC_d3f08.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_d3f08.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\Debug\\".
+          Creando directorio "cmTC_d3f08.dir\\Debug\\cmTC_d3f08.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_d3f08.dir\\Debug\\cmTC_d3f08.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_d3f08.dir\\Debug\\cmTC_d3f08.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_d3f08.dir\\Debug\\\\" /Fd"cmTC_d3f08.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\OpenMPCheckVersion.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_d3f08.dir\\Debug\\\\" /Fd"cmTC_d3f08.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\OpenMPCheckVersion.c"
+          OpenMPCheckVersion.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\Debug\\cmTC_d3f08.exe" /INCREMENTAL /ILK:"cmTC_d3f08.dir\\Debug\\cmTC_d3f08.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-sqqa1g/Debug/cmTC_d3f08.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-sqqa1g/Debug/cmTC_d3f08.lib" /MACHINE:X64  /machine:x64 cmTC_d3f08.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_d3f08.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\Debug\\cmTC_d3f08.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_d3f08.dir\\Debug\\cmTC_d3f08.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_d3f08.dir\\Debug\\cmTC_d3f08.tlog\\cmTC_d3f08.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sqqa1g\\cmTC_d3f08.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.49
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:46 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9wr13x"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9wr13x"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9wr13x'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cc039.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:31.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\cmTC_cc039.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_cc039.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\Debug\\".
+          Creando directorio "cmTC_cc039.dir\\Debug\\cmTC_cc039.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_cc039.dir\\Debug\\cmTC_cc039.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_cc039.dir\\Debug\\cmTC_cc039.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++17 /Fo"cmTC_cc039.dir\\Debug\\\\" /Fd"cmTC_cc039.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\OpenMPCheckVersion.cpp"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++17 /Fo"cmTC_cc039.dir\\Debug\\\\" /Fd"cmTC_cc039.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\OpenMPCheckVersion.cpp"
+          OpenMPCheckVersion.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\Debug\\cmTC_cc039.exe" /INCREMENTAL /ILK:"cmTC_cc039.dir\\Debug\\cmTC_cc039.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9wr13x/Debug/cmTC_cc039.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-9wr13x/Debug/cmTC_cc039.lib" /MACHINE:X64  /machine:x64 cmTC_cc039.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_cc039.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\Debug\\cmTC_cc039.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_cc039.dir\\Debug\\cmTC_cc039.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_cc039.dir\\Debug\\cmTC_cc039.tlog\\cmTC_cc039.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9wr13x\\cmTC_cc039.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.51
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/pybind11-src/tools/pybind11Common.cmake:268 (check_cxx_compiler_flag)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/pybind11-src/tools/pybind11Common.cmake:332 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/pybind11-src/tools/pybind11Common.cmake:376 (_pybind11_generate_lto)"
+      - "C:/Users/jefy_/Downloads/AdmisionTech/build/_deps/pybind11-src/CMakeLists.txt:208 (include)"
+    checks:
+      - "Performing Test HAS_MSVC_GL_LTCG"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-gy0y4o"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-gy0y4o"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_MSVC_GL_LTCG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-gy0y4o'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_df32c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 24/06/2025 21:46:41.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\cmTC_df32c.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_df32c.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\Debug\\".
+          Creando directorio "cmTC_df32c.dir\\Debug\\cmTC_df32c.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_df32c.dir\\Debug\\cmTC_df32c.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_df32c.dir\\Debug\\cmTC_df32c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_df32c.dir\\Debug\\\\" /Fd"cmTC_df32c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\src.cxx"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.44.35211 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_df32c.dir\\Debug\\\\" /Fd"cmTC_df32c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\Debug\\cmTC_df32c.exe" /INCREMENTAL /ILK:"cmTC_df32c.dir\\Debug\\cmTC_df32c.ilk" /NOLOGO "-LTCG" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-gy0y4o/Debug/cmTC_df32c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-gy0y4o/Debug/cmTC_df32c.lib" /MACHINE:X64  /machine:x64 cmTC_df32c.dir\\Debug\\src.obj
+        LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificaci├│n '/LTCG' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\cmTC_df32c.vcxproj]
+          Generando c├│digo
+          Generaci├│n de c├│digo finalizada
+          cmTC_df32c.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\Debug\\cmTC_df32c.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_df32c.dir\\Debug\\cmTC_df32c.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_df32c.dir\\Debug\\cmTC_df32c.tlog\\cmTC_df32c.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\cmTC_df32c.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\cmTC_df32c.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificaci├│n '/LTCG' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gy0y4o\\cmTC_df32c.vcxproj]
+        
+            1 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.59
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindCUDAToolkit.cmake:681 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindCUDAToolkit.cmake:814 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:53 (find_package)"
+    message: |
+      Executed nvcc to extract CUDAToolkit information:
+      nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+      nvcc fatal   : Cannot find compiler 'cl.exe' in PATH
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCUDACompiler.cmake:139 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+      Compilaci├│n iniciada a las 25/06/2025 00:45:18.
+      
+      Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" en nodo 1 (destinos predeterminados).
+      PrepareForBuild:
+        Creando directorio "Debug\\".
+        La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+        Creando directorio "Debug\\CompilerIdCUDA.tlog\\".
+      InitializeBuildStatus:
+        Se crear├í "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+      AddCudaCompileDeps:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu 
+      El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).
+      CudaBuildCore:
+        Compiling CUDA source file CMakeCUDACompilerId.cu...
+        Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug".
+        cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp712db9c1ba2648adbbcac42c73f3a3a1.cmd"
+        "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
+        
+        C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" 
+      CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+        #$ _NVVM_BRANCH_=nvvm
+        #$ _SPACE_= 
+        #$ _CUDART_=cudart
+        #$ _HERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+        #$ _THERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+        #$ _TARGET_SIZE_=
+        #$ _TARGET_DIR_=
+        #$ _TARGET_SIZE_=64
+        #$ _WIN_PLATFORM_=x64
+        #$ TOP=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/..
+        #$ CICC_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin
+        #$ NVVMIR_LIBRARY_DIR=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/libdevice
+        #$ PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.1\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\jefy_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jefy_\\AppData\\Roaming\\npm;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\msys64\\ucrt64\\bin;C:\\msys64\\mingw64\\bin;;c:\\Users\\jefy_\\.vscode\\extensions\\ms-python.debugpy-2025.8.0-win32-x64\\bundled\\scripts\\noConfigScripts;
+        #$ INCLUDES="-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"  
+        #$ LIBRARIES=  "/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib/x64"
+        #$ CUDAFE_FLAGS=--sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"
+        #$ PTXAS_FLAGS=
+        CMakeCUDACompilerId.cu
+        #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res
+        #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res
+        #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx""
+        #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" 
+        #$ fatbinary -64 --ident="C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" 
+        #$ erase C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin
+        #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"   -Zi "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" ]
+        #$ cl.exe @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res" -Fo"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" 
+        tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp
+        #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res
+      Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destinos).
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj
+           Creando biblioteca .\\CompilerIdCUDA.lib y objeto .\\CompilerIdCUDA.exp
+      LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+        CompilerIdCUDA.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.exe
+      PostBuildEvent:
+        echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+        :VCEnd
+        CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+      FinalizeBuildStatus:
+        Se eliminar├í el archivo "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destinos predeterminados).
+      
+      Compilaci├│n correcta.
+      
+      "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+      "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destino) (1:2) ->
+      (CudaBuildCore destino) -> 
+        CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+      
+      
+      "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+      (Link destino) -> 
+        LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+      
+          2 Advertencia(s)
+          0 Errores
+      
+      Tiempo transcurrido 00:00:18.61
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exp"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.lib"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA.exe
+      The host compiler identification is MSVC
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:136 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCUDACompiler.cmake:250 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.1\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\jefy_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jefy_\\AppData\\Roaming\\npm;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\msys64\\ucrt64\\bin;C:\\msys64\\mingw64\\bin;;c:\\Users\\jefy_\\.vscode\\extensions\\ms-python.debugpy-2025.8.0-win32-x64\\bundled\\scripts\\noConfigScripts;]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"  ]
+        no 'SYSTEM_INCLUDES=' string found in nvcc output:
+          Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+          Compilaci├│n iniciada a las 25/06/2025 00:45:18.
+          
+          Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" en nodo 1 (destinos predeterminados).
+          PrepareForBuild:
+            Creando directorio "Debug\\".
+            La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+            Creando directorio "Debug\\CompilerIdCUDA.tlog\\".
+          InitializeBuildStatus:
+            Se crear├í "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+            Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+          AddCudaCompileDeps:
+            C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu 
+          El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).
+          CudaBuildCore:
+            Compiling CUDA source file CMakeCUDACompilerId.cu...
+            Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug".
+            cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp712db9c1ba2648adbbcac42c73f3a3a1.cmd"
+            "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
+            
+            C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" 
+          CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+            #$ _NVVM_BRANCH_=nvvm
+            #$ _SPACE_= 
+            #$ _CUDART_=cudart
+            #$ _HERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+            #$ _THERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+            #$ _TARGET_SIZE_=
+            #$ _TARGET_DIR_=
+            #$ _TARGET_SIZE_=64
+            #$ _WIN_PLATFORM_=x64
+            #$ TOP=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/..
+            #$ CICC_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin
+            #$ NVVMIR_LIBRARY_DIR=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/libdevice
+            #$ PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.1\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\jefy_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jefy_\\AppData\\Roaming\\npm;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\msys64\\ucrt64\\bin;C:\\msys64\\mingw64\\bin;;c:\\Users\\jefy_\\.vscode\\extensions\\ms-python.debugpy-2025.8.0-win32-x64\\bundled\\scripts\\noConfigScripts;
+            #$ INCLUDES="-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"  
+            #$ LIBRARIES=  "/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib/x64"
+            #$ CUDAFE_FLAGS=--sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"
+            #$ PTXAS_FLAGS=
+            CMakeCUDACompilerId.cu
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+            #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+            CMakeCUDACompilerId.cu
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res
+            #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+            #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" 
+            CMakeCUDACompilerId.cu
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res
+            #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx""
+            #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" 
+            #$ fatbinary -64 --ident="C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" 
+            #$ erase C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"   -Zi "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" ]
+            #$ cl.exe @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res" -Fo"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" 
+            tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res
+          Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destinos).
+          Link:
+            C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj
+               Creando biblioteca .\\CompilerIdCUDA.lib y objeto .\\CompilerIdCUDA.exp
+          LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+            CompilerIdCUDA.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.exe
+          PostBuildEvent:
+            echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+            :VCEnd
+            CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+          FinalizeBuildStatus:
+            Se eliminar├í el archivo "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+            Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate".
+          Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destinos predeterminados).
+          
+          Compilaci├│n correcta.
+          
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destino) (1:2) ->
+          (CudaBuildCore destino) -> 
+            CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+          
+          
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+          (Link destino) -> 
+            LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+          
+              2 Advertencia(s)
+              0 Errores
+          
+          Tiempo transcurrido 00:00:18.61
+          
+        considering line: [Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework]
+        considering line: [Compilaci├│n iniciada a las 25/06/2025 00:45:18.]
+        considering line: [Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" en nodo 1 (destinos predeterminados).]
+        considering line: [PrepareForBuild:]
+        considering line: [  Creando directorio "Debug\\".]
+        considering line: [  La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.]
+        considering line: [  Creando directorio "Debug\\CompilerIdCUDA.tlog\\".]
+        considering line: [InitializeBuildStatus:]
+        considering line: [  Se crear├í "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".]
+        considering line: [  Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".]
+        considering line: [AddCudaCompileDeps:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu ]
+        considering line: [El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).]
+        considering line: [CudaBuildCore:]
+        considering line: [  Compiling CUDA source file CMakeCUDACompilerId.cu...]
+        considering line: [  Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug".]
+        considering line: [  cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp712db9c1ba2648adbbcac42c73f3a3a1.cmd"]
+        considering line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"]
+        considering line: [  ]
+        considering line: [  C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        considering line: [CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [                                    CMakeCUDACompilerId.cu]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res]
+        considering line: [  #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res]
+        considering line: [  #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx""]
+        considering line: [  #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [  #$ fatbinary -64 --ident="C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [  #$ erase C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"   -Zi "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [  #$ cl.exe @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res" -Fo"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" ]
+        considering line: [  tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res]
+        considering line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destinos).]
+        considering line: [Link:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+          extracted link line: [link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+        considering line: [     Creando biblioteca .\\CompilerIdCUDA.lib y objeto .\\CompilerIdCUDA.exp]
+        considering line: [LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        considering line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [  CompilerIdCUDA.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.exe]
+        considering line: [PostBuildEvent:]
+        considering line: [  echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe]
+        considering line: [  :VCEnd]
+        considering line: [  CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe]
+        considering line: [FinalizeBuildStatus:]
+        considering line: [  Se eliminar├í el archivo "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".]
+        considering line: [  Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate".]
+        considering line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destinos predeterminados).]
+        considering line: [Compilaci├│n correcta.]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destino) (1:2) ->]
+        considering line: [(CudaBuildCore destino) -> ]
+        considering line: [  CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->]
+        considering line: [(Link destino) -> ]
+        considering line: [  LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        considering line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [    2 Advertencia(s)]
+        considering line: [    0 Errores]
+        considering line: [Tiempo transcurrido 00:00:18.61]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+          arg [cuda-fake-ld] ==> ignore
+          arg [link.exe] ==> ignore
+          arg [/ERRORREPORT:QUEUE] ==> ignore
+          arg [/OUT:.\\CompilerIdCUDA.exe] ==> ignore
+          arg [/INCREMENTAL:NO] ==> ignore
+          arg [/NOLOGO] ==> ignore
+          arg [/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64] ==> dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [/MANIFEST] ==> ignore
+          arg [/MANIFESTUAC:level='asInvoker' uiAccess='false'] ==> ignore
+          arg [/manifest:embed] ==> ignore
+          arg [/PDB:.\\CompilerIdCUDA.pdb] ==> ignore
+          arg [/SUBSYSTEM:CONSOLE] ==> ignore
+          arg [/TLBID:1] ==> ignore
+          arg [/DYNAMICBASE] ==> ignore
+          arg [/NXCOMPAT] ==> ignore
+          arg [/IMPLIB:.\\CompilerIdCUDA.lib] ==> ignore MSVC link option
+          arg [/MACHINE:X64] ==> ignore
+          arg [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj] ==> ignore
+        collapse library dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:165 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCUDACompiler.cmake:250 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.1\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\jefy_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jefy_\\AppData\\Roaming\\npm;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\msys64\\ucrt64\\bin;C:\\msys64\\mingw64\\bin;;c:\\Users\\jefy_\\.vscode\\extensions\\ms-python.debugpy-2025.8.0-win32-x64\\bundled\\scripts\\noConfigScripts;]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"  ]
+        no 'SYSTEM_INCLUDES=' string found in nvcc output:
+          Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+          Compilaci├│n iniciada a las 25/06/2025 00:45:18.
+          
+          Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" en nodo 1 (destinos predeterminados).
+          PrepareForBuild:
+            Creando directorio "Debug\\".
+            La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+            Creando directorio "Debug\\CompilerIdCUDA.tlog\\".
+          InitializeBuildStatus:
+            Se crear├í "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+            Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+          AddCudaCompileDeps:
+            C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu 
+          El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).
+          CudaBuildCore:
+            Compiling CUDA source file CMakeCUDACompilerId.cu...
+            Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug".
+            cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp712db9c1ba2648adbbcac42c73f3a3a1.cmd"
+            "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
+            
+            C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" 
+          CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+            #$ _NVVM_BRANCH_=nvvm
+            #$ _SPACE_= 
+            #$ _CUDART_=cudart
+            #$ _HERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+            #$ _THERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin
+            #$ _TARGET_SIZE_=
+            #$ _TARGET_DIR_=
+            #$ _TARGET_SIZE_=64
+            #$ _WIN_PLATFORM_=x64
+            #$ TOP=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/..
+            #$ CICC_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin
+            #$ NVVMIR_LIBRARY_DIR=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/libdevice
+            #$ PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.1\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\jefy_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jefy_\\AppData\\Roaming\\npm;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jefy_\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\msys64\\ucrt64\\bin;C:\\msys64\\mingw64\\bin;;c:\\Users\\jefy_\\.vscode\\extensions\\ms-python.debugpy-2025.8.0-win32-x64\\bundled\\scripts\\noConfigScripts;
+            #$ INCLUDES="-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"  
+            #$ LIBRARIES=  "/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../lib/x64"
+            #$ CUDAFE_FLAGS=--sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"
+            #$ PTXAS_FLAGS=
+            CMakeCUDACompilerId.cu
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+            #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+            CMakeCUDACompilerId.cu
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res
+            #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+            #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" 
+            CMakeCUDACompilerId.cu
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res
+            #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx""
+            #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" 
+            #$ fatbinary -64 --ident="C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" 
+            #$ erase C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin
+            #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"   -Zi "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" ]
+            #$ cl.exe @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res" -Fo"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" 
+            tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp
+            #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res
+          Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destinos).
+          Link:
+            C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj
+               Creando biblioteca .\\CompilerIdCUDA.lib y objeto .\\CompilerIdCUDA.exp
+          LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+            CompilerIdCUDA.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.exe
+          PostBuildEvent:
+            echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+            :VCEnd
+            CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe
+          FinalizeBuildStatus:
+            Se eliminar├í el archivo "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".
+            Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate".
+          Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destinos predeterminados).
+          
+          Compilaci├│n correcta.
+          
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destino) (1:2) ->
+          (CudaBuildCore destino) -> 
+            CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+          
+          
+          "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->
+          (Link destino) -> 
+            LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+          
+              2 Advertencia(s)
+              0 Errores
+          
+          Tiempo transcurrido 00:00:18.61
+          
+        considering line: [Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework]
+        considering line: [Compilaci├│n iniciada a las 25/06/2025 00:45:18.]
+        considering line: [Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" en nodo 1 (destinos predeterminados).]
+        considering line: [PrepareForBuild:]
+        considering line: [  Creando directorio "Debug\\".]
+        considering line: [  La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.]
+        considering line: [  Creando directorio "Debug\\CompilerIdCUDA.tlog\\".]
+        considering line: [InitializeBuildStatus:]
+        considering line: [  Se crear├í "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".]
+        considering line: [  Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".]
+        considering line: [AddCudaCompileDeps:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu ]
+        considering line: [El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).]
+        considering line: [CudaBuildCore:]
+        considering line: [  Compiling CUDA source file CMakeCUDACompilerId.cu...]
+        considering line: [  Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug".]
+        considering line: [  cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp712db9c1ba2648adbbcac42c73f3a3a1.cmd"]
+        considering line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"]
+        considering line: [  ]
+        considering line: [  C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"  -G   --keep-dir CompilerIdCUDA\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdDebug\\vc143.pdb" -o C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        considering line: [CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [                                    CMakeCUDACompilerId.cu]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-8.res]
+        considering line: [  #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__ -D__CUDACC_DEBUG__  /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"    -D "_MBCS" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=86 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" -Zi "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res" > "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-10.res]
+        considering line: [  #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --module_id_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-9_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx""]
+        considering line: [  #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [  #$ fatbinary -64 --ident="C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-11_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [  #$ erase C:/Users/jefy_/AppData/Local/Temp/tmpxft_000018e8_00000000-4_CMakeCUDACompilerId.fatbin]
+        considering line: [  #$ resource file C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc /EHsc /W0 /nologo /Od /FS /Zi /RTC1 /MDd /FdDebug\\vc143.pdb -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" -I"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/include" "-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin/../include"   -Zi "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [  #$ cl.exe @"C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res" -Fo"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/4.0.3/CompilerIdCUDA/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" ]
+        considering line: [  tmpxft_000018e8_00000000-7_CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [  #$ erase C:\\Users\\jefy_\\AppData\\Local\\Temp/tmpxft_000018e8_00000000-12.res]
+        considering line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destinos).]
+        considering line: [Link:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+          extracted link line: [link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+        considering line: [     Creando biblioteca .\\CompilerIdCUDA.lib y objeto .\\CompilerIdCUDA.exp]
+        considering line: [LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        considering line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [  CompilerIdCUDA.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.exe]
+        considering line: [PostBuildEvent:]
+        considering line: [  echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe]
+        considering line: [  :VCEnd]
+        considering line: [  CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe]
+        considering line: [FinalizeBuildStatus:]
+        considering line: [  Se eliminar├í el archivo "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild".]
+        considering line: [  Aplicando tarea Touch a "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate".]
+        considering line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destinos predeterminados).]
+        considering line: [Compilaci├│n correcta.]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (CudaBuildCore destino) (1:2) ->]
+        considering line: [(CudaBuildCore destino) -> ]
+        considering line: [  CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (destino predeterminado) (1) ->]
+        considering line: [(Link destino) -> ]
+        considering line: [  LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        considering line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [    2 Advertencia(s)]
+        considering line: [    0 Errores]
+        considering line: [Tiempo transcurrido 00:00:18.61]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj]
+          arg [cuda-fake-ld] ==> ignore
+          arg [link.exe] ==> ignore
+          arg [/ERRORREPORT:QUEUE] ==> ignore
+          arg [/OUT:.\\CompilerIdCUDA.exe] ==> ignore
+          arg [/INCREMENTAL:NO] ==> ignore
+          arg [/NOLOGO] ==> ignore
+          arg [/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64] ==> dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [/MANIFEST] ==> ignore
+          arg [/MANIFESTUAC:level='asInvoker' uiAccess='false'] ==> ignore
+          arg [/manifest:embed] ==> ignore
+          arg [/PDB:.\\CompilerIdCUDA.pdb] ==> ignore
+          arg [/SUBSYSTEM:CONSOLE] ==> ignore
+          arg [/TLBID:1] ==> ignore
+          arg [/DYNAMICBASE] ==> ignore
+          arg [/NXCOMPAT] ==> ignore
+          arg [/IMPLIB:.\\CompilerIdCUDA.lib] ==> ignore MSVC link option
+          arg [/MACHINE:X64] ==> ignore
+          arg [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\4.0.3\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj] ==> ignore
+        collapse library dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (enable_language)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu"
+      binary: "C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu"
+    cmakeVariables:
+      CMAKE_CUDA_FLAGS: "-D_WINDOWS -Xcompiler=\"/W3 /GR /EHsc\""
+      CMAKE_CUDA_FLAGS_DEBUG: "-Xcompiler=\"-MDd  -Zi -Ob0 -Od /RTC1\""
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ae0a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework
+        Compilaci├│n iniciada a las 25/06/2025 00:45:38.
+        
+        Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Creando directorio "cmTC_2ae0a.dir\\Debug\\".
+          La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.
+          Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\".
+          Creando directorio "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild".
+        AddCudaCompileDeps:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu" 
+        El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).
+        CudaBuildCore:
+          Compiling CUDA source file ..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu...
+          cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp4112489855644cc5af71b7ed08b32206.cmd"
+          "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"     --keep-dir cmTC_2ae0a\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdcmTC_2ae0a.dir\\Debug\\vc143.pdb" -o cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu"
+          
+          C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"     --keep-dir cmTC_2ae0a\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdcmTC_2ae0a.dir\\Debug\\vc143.pdb" -o cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu" 
+        cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          CMakeCUDACompilerABI.cu
+        cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          CMakeCUDACompilerABI.cu
+        CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          CMakeCUDACompilerABI.cu
+        cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          tmpxft_00000660_00000000-7_CMakeCUDACompilerABI.cudafe1.cpp
+        C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': truncamiento de 'int' a 'bool' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (CudaBuildCore destinos).
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\cmTC_2ae0a.exe" /INCREMENTAL /ILK:"cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.lib" /MACHINE:X64  /machine:x64 -v cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj
+        LINK : warning LNK4044: opci├│n '/v' no reconocida; omitida [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+             Creando biblioteca C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.lib y objeto C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.exp
+        LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          cmTC_2ae0a.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\cmTC_2ae0a.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\cmTC_2ae0a.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destino predeterminado) (1) ->
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (CudaBuildCore destino) (1:2) ->
+        (CudaBuildCore destino) -> 
+          cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': truncamiento de 'int' a 'bool' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+        
+        
+        "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destino predeterminado) (1) ->
+        (Link destino) -> 
+          LINK : warning LNK4044: opci├│n '/v' no reconocida; omitida [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+          LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]
+        
+            7 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:05.10
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=start
+        warn: unable to parse implicit include dirs!
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ae0a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n]
+        ignore line: [Versi├│n de MSBuild 17.14.10+8b8e13593 para .NET Framework]
+        ignore line: [Compilaci├│n iniciada a las 25/06/2025 00:45:38.]
+        ignore line: []
+        ignore line: [Proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" en nodo 1 (destinos predeterminados).]
+        ignore line: [PrepareForBuild:]
+        ignore line: [  Creando directorio "cmTC_2ae0a.dir\\Debug\\".]
+        ignore line: [  La salida estructurada est├í habilitada. El formato del diagn├│stico del compilador reflejar├í la jerarqu├¡a de errores. Consulte https://aka.ms/cpp/structured-output para obtener m├ís detalles.]
+        ignore line: [  Creando directorio "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\".]
+        ignore line: [  Creando directorio "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\".]
+        ignore line: [InitializeBuildStatus:]
+        ignore line: [  Se crear├í "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".]
+        ignore line: [  Aplicando tarea Touch a "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild".]
+        ignore line: [AddCudaCompileDeps:]
+        ignore line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=9 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: [El proyecto "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (1) est├í compilando "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (1:2) en el nodo 1 (CudaBuildCore destinos).]
+        ignore line: [CudaBuildCore:]
+        ignore line: [  Compiling CUDA source file ..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu...]
+        ignore line: [  cmd.exe /C "C:\\Users\\jefy_\\AppData\\Local\\Temp\\tmp4112489855644cc5af71b7ed08b32206.cmd"]
+        ignore line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"     --keep-dir cmTC_2ae0a\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdcmTC_2ae0a.dir\\Debug\\vc143.pdb" -o cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu"]
+        ignore line: [  ]
+        ignore line: [  C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\include"     --keep-dir cmTC_2ae0a\\x64\\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdcmTC_2ae0a.dir\\Debug\\vc143.pdb" -o cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: [cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  tmpxft_00000660_00000000-7_CMakeCUDACompilerABI.cudafe1.cpp]
+        ignore line: [C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': truncamiento de 'int' a 'bool' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (CudaBuildCore destinos).]
+        ignore line: [Link:]
+        ignore line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\cmTC_2ae0a.exe" /INCREMENTAL /ILK:"cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\lib\\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.lib" /MACHINE:X64  /machine:x64 -v cmTC_2ae0a.dir\\Debug\\CMakeCUDACompilerABI.obj]
+        ignore line: [LINK : warning LNK4044: opci├│n '/v' no reconocida]
+        ignore line: [ omitida [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [     Creando biblioteca C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.lib y objeto C:/Users/jefy_/Downloads/AdmisionTech/build/CMakeFiles/CMakeScratch/TryCompile-44g0cu/Debug/cmTC_2ae0a.exp]
+        ignore line: [LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        ignore line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  cmTC_2ae0a.vcxproj -> C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\Debug\\cmTC_2ae0a.exe]
+        ignore line: [FinalizeBuildStatus:]
+        ignore line: [  Se eliminar├í el archivo "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\unsuccessfulbuild".]
+        ignore line: [  Aplicando tarea Touch a "cmTC_2ae0a.dir\\Debug\\cmTC_2ae0a.tlog\\cmTC_2ae0a.lastbuildstate".]
+        ignore line: [Compilaci├│n del proyecto terminada "C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destinos predeterminados).]
+        ignore line: []
+        ignore line: [Compilaci├│n correcta.]
+        ignore line: []
+        ignore line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destino predeterminado) (1) ->]
+        ignore line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (CudaBuildCore destino) (1:2) ->]
+        ignore line: [(CudaBuildCore destino) -> ]
+        ignore line: [  cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning). [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  cl : L├¡nea de comandos warning D9002: se omite la opci├│n desconocida '-v' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': truncamiento de 'int' a 'bool' [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: []
+        ignore line: []
+        ignore line: ["C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj" (destino predeterminado) (1) ->]
+        ignore line: [(Link destino) -> ]
+        ignore line: [  LINK : warning LNK4044: opci├│n '/v' no reconocida]
+        ignore line: [ omitida [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: [  LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas]
+        ignore line: [ use la biblioteca /NODEFAULTLIB:biblioteca [C:\\Users\\jefy_\\Downloads\\AdmisionTech\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44g0cu\\cmTC_2ae0a.vcxproj]]
+        ignore line: []
+        ignore line: [    7 Advertencia(s)]
+        ignore line: [    0 Errores]
+        ignore line: []
+        ignore line: [Tiempo transcurrido 00:00:05.10]
+        ignore line: []
+        ignore line: []
+        linker tool for 'CUDA': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (enable_language)"
+    message: |
+      Running the CUDA compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35211.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
