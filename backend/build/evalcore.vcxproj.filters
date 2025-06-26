@@ -9,6 +9,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <CudaCompile Include="..\..\src\evaluator_cuda.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>

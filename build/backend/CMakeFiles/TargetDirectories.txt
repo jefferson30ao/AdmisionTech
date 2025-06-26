@@ -1,5 +1,6 @@
 C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/evalcore.dir
 C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/test_serial.dir
+C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/test_cuda.dir
 C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/RUN_TESTS.dir
 C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/INSTALL.dir
 C:/Users/jefy_/Downloads/AdmisionTech/build/backend/CMakeFiles/ALL_BUILD.dir

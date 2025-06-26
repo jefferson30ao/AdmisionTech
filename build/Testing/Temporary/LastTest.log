@@ -1,0 +1,53 @@
+Start testing: Jun 25 21:48 Hora est. Pacífico, Sudamérica
+----------------------------------------------------------
+1/2 Testing: serial_test
+1/2 Test: serial_test
+Command: "C:/Users/jefy_/Downloads/AdmisionTech/build/Debug/test_serial.exe"
+Directory: C:/Users/jefy_/Downloads/AdmisionTech/build
+"serial_test" start time: Jun 25 21:48 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.29 sec
+----------------------------------------------------------
+Test Passed.
+"serial_test" end time: Jun 25 21:48 Hora est. Pacífico, Sudamérica
+"serial_test" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/2 Testing: cuda_test
+2/2 Test: cuda_test
+Command: "C:/Users/jefy_/Downloads/AdmisionTech/build/Debug/test_cuda.exe"
+Directory: C:/Users/jefy_/Downloads/AdmisionTech/build
+"cuda_test" start time: Jun 25 21:48 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\jefy_\Downloads\AdmisionTech\build\_deps\googletest-src\googletest\src\gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CudaEvaluatorTest
+[ RUN      ] CudaEvaluatorTest.MatchesSerialAndOpenMP
+[CUDA] Evaluating 3 students with 100 questions
+[CUDA] Evaluation complete
+
+Performance Metrics (small dataset):
+Serial Time: 0.0021 ms
+OpenMP Time: 1.6428 ms
+CUDA Time: 2052.01 ms
+Speed-up CUDA vs Serial: 1.02338e-06x
+Speed-up CUDA vs OpenMP: 0.000800579x
+[       OK ] CudaEvaluatorTest.MatchesSerialAndOpenMP (2054 ms)
+[----------] 1 test from CudaEvaluatorTest (2055 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2055 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   3.28 sec
+----------------------------------------------------------
+Test Passed.
+"cuda_test" end time: Jun 25 21:48 Hora est. Pacífico, Sudamérica
+"cuda_test" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Jun 25 21:48 Hora est. Pacífico, Sudamérica

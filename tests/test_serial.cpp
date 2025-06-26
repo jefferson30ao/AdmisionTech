@@ -15,7 +15,7 @@ TEST(SerialTest, Correct) {
     ScoringRule rule = {1, 0, 0};
     Result result[3];
 
-    evaluate_serial(answers, 3, key, rule, result);
+    evaluate_serial(answers, 3, key, 5, rule, result);
 
     for (int i = 0; i < 3; ++i) {
         ASSERT_EQ(result[i].correct, 5);
@@ -35,7 +35,7 @@ TEST(SerialTest, StudentAnswers) {
     ScoringRule rule = {1, 0, 0};
     Result result[3];
 
-    evaluate_serial(answers, 3, key, rule, result);
+    evaluate_serial(answers, 3, key, 5, rule, result);
 
     assert(result[0].correct == 4);
     assert(result[0].wrong == 0);
@@ -63,7 +63,7 @@ TEST(OpenMPTest, Correct) {
     ScoringRule rule = {1, 0, 0};
     Result result[3];
 
-    evaluate_openmp(answers, 3, key, rule, result);
+    evaluate_openmp(answers, 3, key, 5, rule, result);
 
     for (int i = 0; i < 3; ++i) {
         ASSERT_EQ(result[i].correct, 5);
@@ -83,7 +83,7 @@ TEST(OpenMPTest, StudentAnswers) {
     ScoringRule rule = {1, 0, 0};
     Result result[3];
 
-    evaluate_openmp(answers, 3, key, rule, result);
+    evaluate_openmp(answers, 3, key, 5, rule, result);
 
     assert(result[0].correct == 4);
     assert(result[0].wrong == 0);
