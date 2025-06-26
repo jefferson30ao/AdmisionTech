@@ -61,6 +61,11 @@ async def run_evaluation(
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
+try:
+    cuda_available = (pyevalcore.get_device_count() > 0)
+except Exception:
+    cuda_available = False
+
 dash_app.layout = html.Div([
     html.H1("Sistema de Evaluación de Exámenes"),
 
@@ -225,8 +230,6 @@ def run_evaluation_callback(n_clicks, mode, correct, wrong, blank):
         except Exception as e:
             return [], html.Div(), {}, html.Div(f"Error en el procesamiento de evaluación: {str(e)}", style={'color': 'red'})
     return [], html.Div(), {}, html.Div("Presione 'Iniciar Evaluación' para ver los resultados.")
-
-cuda_available = (pyevalcore.get_device_count() > 0)
 
 def run_serial(df_answers: pd.DataFrame, series_key: pd.Series, rule: dict) -> pd.DataFrame:
     """

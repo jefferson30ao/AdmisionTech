@@ -117,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <CudaLink>
-      <AdditionalOptions></AdditionalOptions>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
       <PerformDeviceLink>false</PerformDeviceLink>
     </CudaLink>
     <Lib>
@@ -165,7 +165,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <CudaLink>
-      <AdditionalOptions></AdditionalOptions>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
       <PerformDeviceLink>false</PerformDeviceLink>
     </CudaLink>
     <Lib>
@@ -213,7 +213,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <CudaLink>
-      <AdditionalOptions></AdditionalOptions>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
       <PerformDeviceLink>false</PerformDeviceLink>
     </CudaLink>
     <Lib>
@@ -260,7 +260,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <CudaLink>
-      <AdditionalOptions></AdditionalOptions>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
       <PerformDeviceLink>false</PerformDeviceLink>
     </CudaLink>
     <Lib>
