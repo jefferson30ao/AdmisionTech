@@ -1,0 +1,3 @@
+serial_test 1 1.86584
+cuda_test 1 3.97446
+---

@@ -101,6 +101,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
+      <SuppressStartupBanner></SuppressStartupBanner>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;Py_NO_LINK_LIB;CMAKE_INTDIR="Debug";pyevalcore_EXPORTS</PreprocessorDefinitions>
@@ -150,6 +151,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
+      <SuppressStartupBanner></SuppressStartupBanner>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -203,6 +205,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
+      <SuppressStartupBanner></SuppressStartupBanner>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -257,6 +260,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
+      <SuppressStartupBanner></SuppressStartupBanner>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;Py_NO_LINK_LIB;CMAKE_INTDIR="RelWithDebInfo";pyevalcore_EXPORTS</PreprocessorDefinitions>

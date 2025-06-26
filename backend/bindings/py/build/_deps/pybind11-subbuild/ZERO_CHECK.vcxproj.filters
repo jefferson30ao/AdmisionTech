@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\bindings\py\build\_deps\pybind11-subbuild\CMakeFiles\e357fca9eee0febf8bc6df387f67c628\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{94CC9A85-6F9E-3D26-A531-778C1C30C228}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
