@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(EVALCORE_SOURCES
     src/evaluator_serial.cpp
     src/evaluator_openmp.cpp
+    src/evaluator_pthreads.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../src/evaluator_cuda.cu
 )
 
@@ -34,6 +35,13 @@ if(CUDAToolkit_FOUND)
     message(STATUS "CUDA Toolkit encontrado")
     target_link_libraries(evalcore PUBLIC CUDA::cudart)
     target_compile_options(evalcore PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-use_fast_math>)
+endif()
+
+# Pthreads
+find_package(Threads REQUIRED)
+if(Threads_FOUND)
+    message(STATUS "Pthreads encontrado")
+    target_link_libraries(evalcore PRIVATE Threads::Threads)
 endif()
 
 # GoogleTest via FetchContent

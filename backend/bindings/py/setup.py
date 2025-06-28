@@ -43,17 +43,17 @@ class CustomBuildExt(_build_ext):
             # Add CUDA link args
             if cuda_path:
                 if self.compiler.compiler_type == 'msvc':
-                    ext.extra_link_args += [f'/LIBPATH:{cuda_path}/lib/x64', 'cudart_static.lib', 'cuda.lib']
+                    ext.extra_link_args += [f'/LIBPATH:{cuda_path}/lib/x64', 'cudart_static.lib', 'cuda.lib', f'/LIBPATH:{os.path.join(os.path.abspath("../../.."), "vcpkg/installed/x64-windows/lib")}', 'pthreadVC3.lib']
                 else:
-                    ext.extra_link_args += [f'-L{cuda_path}/lib64', '-lcudart_static', '-lcuda'] # Assuming lib64 for Linux/Unix
+                    ext.extra_link_args += [f'-L{cuda_path}/lib64', '-lcudart_static', '-lcuda', f'-L{os.path.join(os.path.abspath("../../.."), "vcpkg/installed/x64-windows/lib")}', '-lpthread'] # Assuming lib64 for Linux/Unix
 
         super().build_extensions()
 
 ext_modules = [
     Pybind11Extension(
         "pyevalcore",
-        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp", "../../src/evaluator_openmp.cpp", "../../../src/evaluator_cuda.cu"],
-        include_dirs=[pybind11.get_include(), "../../include"],
+        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp", "../../src/evaluator_openmp.cpp", "../../../src/evaluator_cuda.cu", "../../../src/evaluator_pthreads.cpp"],
+        include_dirs=[pybind11.get_include(), "../../include", os.path.join(os.path.abspath("../../.."), 'vcpkg/installed/x64-windows/include')],
         language="c++",
     ),
 ]

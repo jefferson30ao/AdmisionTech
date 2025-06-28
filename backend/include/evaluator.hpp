@@ -19,11 +19,12 @@ struct Result {
     uint32_t blank;
 };
 
-enum class Mode { Serial, OpenMP, Cuda };
+enum class Mode { Serial, OpenMP, Cuda, Pthreads };
 
 void evaluate_serial(const int8_t* answers, size_t num_students, const int8_t* key, size_t num_questions, ScoringRule rule, Result* out);
 void evaluate_openmp(const int8_t* answers, size_t num_students, const int8_t* key, size_t num_questions, ScoringRule rule, Result* out);
 void evaluate_cuda(const int8_t* answers, size_t num_students, const int8_t* key, size_t num_questions, ScoringRule rule, Result* out);
+void evaluate_pthreads(const int8_t* answers, size_t num_students, const int8_t* key, size_t num_questions, ScoringRule rule, Result* out);
 
 } // namespace exam
 
