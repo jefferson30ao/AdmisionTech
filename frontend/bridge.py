@@ -44,6 +44,8 @@ async def run_evaluation(
             results_df = run_openmp(students_df, key_df['correct_answer'], rule)
         elif mode == "cuda":
             results_df = run_cuda(students_df, key_df['correct_answer'], rule)
+        elif mode == "pthreads":
+            results_df = run_pthreads(students_df, key_df['correct_answer'], rule)
         else:
             return {"status": "error", "message": "Modo de ejecución no válido."}
 
@@ -103,6 +105,7 @@ dash_app.layout = html.Div([
                 options=[
                     {'label': 'Serial', 'value': 'serial'},
                     {'label': 'OpenMP', 'value': 'openmp'},
+                    {'label': 'Pthreads', 'value': 'pthreads'},
                     {'label': 'CUDA', 'value': 'cuda', 'disabled': not cuda_available}
                 ],
                 value='serial',
@@ -365,6 +368,41 @@ def run_cuda(df_answers: pd.DataFrame, series_key: pd.Series, rule: dict) -> pd.
    # Convertir la lista de diccionarios de resultados a un DataFrame de Pandas
    df_results = pd.DataFrame(results_list)
    # Añadir columna student_id desde el DataFrame original
+   if 'student_id' in df_answers.columns:
+       df_results.insert(0, 'student_id', df_answers['student_id'].values)
+   else:
+       df_results.insert(0, 'student_id', df_results.index)
+   return df_results
+
+def run_pthreads(df_answers: pd.DataFrame, series_key: pd.Series, rule: dict) -> pd.DataFrame:
+   """
+   Ejecuta la evaluación de respuestas en modo Pthreads utilizando la librería C++ a través de pybind11.
+
+   Args:
+       df_answers (pd.DataFrame): DataFrame con las respuestas de los estudiantes.
+       series_key (pd.Series): Serie con la clave de respuestas.
+       rule (dict): Diccionario con las reglas de puntuación.
+
+   Returns:
+       pd.DataFrame: DataFrame con los resultados de la evaluación.
+   """
+   answer_cols = [f'answer_{i}' for i in range(1, 101)]
+   df_clean = df_answers[answer_cols].fillna('').astype(str).apply(lambda col: col.str.strip().str.upper())
+   mapping = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+   df_mapped = df_clean.apply(lambda col: col.map(mapping).fillna(-1).astype(np.int8))
+   answers_np = df_mapped.to_numpy()
+
+   key_clean = series_key.sort_index().astype(str).str.strip().str.upper().map(mapping).fillna(-1).astype(np.int8)
+   key_np = key_clean.values
+
+   scoring_rule = pyevalcore.ScoringRule()
+   scoring_rule.correct = rule.get('correct', 0.0)
+   scoring_rule.wrong = rule.get('wrong', 0.0)
+   scoring_rule.blank = rule.get('blank', 0.0)
+
+   results_list = pyevalcore.run_pthreads(answers_np, key_np, scoring_rule)
+
+   df_results = pd.DataFrame(results_list)
    if 'student_id' in df_answers.columns:
        df_results.insert(0, 'student_id', df_answers['student_id'].values)
    else:

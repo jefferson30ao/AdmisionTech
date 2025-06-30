@@ -130,4 +130,38 @@ PYBIND11_MODULE(pyevalcore, m) {
         }
         return py_results;
     }, "Evaluates answers in OpenMP mode.");
+
+    m.def("run_pthreads", [](py::array_t<int8_t> answers_arr, py::array_t<int8_t> key_arr, exam::ScoringRule rule) {
+        py::buffer_info answers_buf = answers_arr.request();
+        py::buffer_info key_buf = key_arr.request();
+
+        if (answers_buf.ndim != 2)
+            throw py::value_error("answers_arr must be a 2D array");
+        if (key_buf.ndim != 1)
+            throw py::value_error("key_arr must be a 1D array");
+
+        size_t num_students = answers_buf.shape[0];
+        size_t num_questions = answers_buf.shape[1];
+
+        if (num_questions != key_buf.shape[0])
+            throw py::value_error("Number of questions in answers_arr must match length of key_arr");
+
+        const int8_t* answers_ptr = static_cast<int8_t*>(answers_buf.ptr);
+        const int8_t* key_ptr = static_cast<int8_t*>(key_buf.ptr);
+
+        std::vector<exam::Result> results(num_students);
+        exam::evaluate_pthreads(answers_ptr, num_students, key_ptr, num_questions, rule, results.data());
+
+        // Convert results to a list of dictionaries for easier DataFrame conversion in Python
+        py::list py_results;
+        for (const auto& res : results) {
+            py_results.append(py::dict(
+                "score"_a = res.score,
+                "correct"_a = res.correct,
+                "wrong"_a = res.wrong,
+                "blank"_a = res.blank
+            ));
+        }
+        return py_results;
+    }, "Evaluates answers in pthreads mode.");
 }

@@ -27,6 +27,7 @@ target_link_libraries(pyevalcore PRIVATE ${Python3_LIBRARIES})
 
 target_include_directories(pyevalcore PRIVATE
   ${CMAKE_SOURCE_DIR}/include
+  ${CUDAToolkit_INCLUDE_DIRS}
 )
 set_target_properties(pyevalcore PROPERTIES
   CXX_STANDARD 17

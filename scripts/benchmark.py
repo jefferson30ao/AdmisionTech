@@ -24,6 +24,8 @@ def benchmark(modes, num_students=1000, num_questions=100):
             py_results = pyevalcore.run_openmp(answers, key, scoring_rule)
         elif mode == "cuda":
             py_results = pyevalcore.run_cuda(answers, key, scoring_rule)
+        elif mode == "pthreads":
+            py_results = pyevalcore.run_pthreads(answers, key, scoring_rule)
         else:
             raise ValueError(f"Unknown mode: {mode}")
         end_time = time.perf_counter()
@@ -33,5 +35,5 @@ def benchmark(modes, num_students=1000, num_questions=100):
     df.to_csv("benchmark.csv", index=False)
 
 if __name__ == "__main__":
-    modes = ["serial", "openmp", "cuda"]  # Modes to benchmark
+    modes = ["serial", "openmp", "cuda", "pthreads"]  # Modes to benchmark
     benchmark(modes)
