@@ -1,11 +1,16 @@
 import dash
-from dash import html, dcc, Input, Output, State
+from dash import html, dcc, Input, Output, State, callback_context
 import requests
 import base64
 import io
 import pandas as pd
 import plotly.express as px
 import json # Importar json para la función save_config
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib import colors
+from io import BytesIO
 
 # Importar load_scoring_config para asegurar que esté disponible
 from frontend.config_utils import load_scoring_config
@@ -114,6 +119,59 @@ def setup_dash_callbacks(dash_app):
 
 
     @dash_app.callback(
+        Output("download-dataframe-csv", "data"),
+        Input("download-results-button", "n_clicks"),
+        State("results-table", "data"),
+        prevent_initial_call=True,
+    )
+    def download_results_as_csv(n_clicks, table_data):
+        if not n_clicks or not table_data:
+            raise dash.exceptions.PreventUpdate
+
+        df = pd.DataFrame(table_data)
+        
+        # Eliminar la columna 'ID' antes de guardar si no es necesaria en el CSV final
+        if 'ID' in df.columns:
+            df = df.drop(columns=['ID'])
+
+        return dcc.send_data_frame(df.to_csv, "resultados_evaluacion.csv", index=False)
+
+    @dash_app.callback(
+        Output("download-dataframe-pdf", "data"),
+        Input("download-pdf-button", "n_clicks"),
+        State("results-table", "data"),
+        State("results-table", "columns"),
+        prevent_initial_call=True,
+    )
+    def download_results_as_pdf(n_clicks, table_data, table_columns):
+        if not n_clicks or not table_data:
+            raise dash.exceptions.PreventUpdate
+
+        buffer = BytesIO()
+        doc = SimpleDocTemplate(buffer, pagesize=letter)
+        styles = getSampleStyleSheet()
+        
+        # Preparar los datos para la tabla PDF
+        header = [col["name"] for col in table_columns]
+        data = [header] + [[row[col["id"]] for col in table_columns] for row in table_data]
+
+        table = Table(data)
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)
+        ]))
+
+        elements = [Paragraph("Resultados de la Evaluación", styles['h1']), table]
+        doc.build(elements)
+
+        buffer.seek(0)
+        return dcc.send_bytes(buffer.getvalue(), "resultados_evaluacion.pdf")
+    @dash_app.callback(
         [Output('tab-upload-files-content', 'style'),
          Output('tab-select-mode-content', 'style'),
          Output('tab-results-dashboard-content', 'style')],
@@ -122,7 +180,7 @@ def setup_dash_callbacks(dash_app):
          Input('tab-results-dashboard-nav', 'n_clicks')]
     )
     def display_tab_content(n_clicks_upload, n_clicks_mode, n_clicks_results):
-        ctx = dash.callback_context
+        ctx = callback_context
         if not ctx.triggered:
             # Valor por defecto: mostrar la primera pestaña
             return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}

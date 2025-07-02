@@ -198,6 +198,12 @@ def content_evaluacion():
                                     }
                                 ),
                                 html.Div(id='metrics-output', className="mt-3"),
+                                dbc.Row([
+                                    dbc.Col(dbc.Button("Descargar Resultados (CSV)", id="download-results-button", color="success", className="mt-3 mb-3 me-2"), width="auto"),
+                                    dbc.Col(dbc.Button("Descargar Resultados (PDF)", id="download-pdf-button", color="danger", className="mt-3 mb-3"), width="auto"),
+                                ], className="g-0"),
+                                dcc.Download(id="download-dataframe-csv"),
+                                dcc.Download(id="download-dataframe-pdf"),
                                 dcc.Graph(id='score-histogram'),
                             ]),
                         ], className="h-100 mt-3")
