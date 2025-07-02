@@ -88,6 +88,60 @@ def setup_dash_callbacks(dash_app):
 
 
     @dash_app.callback(
+        [Output('tab-upload-files-content', 'style'),
+         Output('tab-select-mode-content', 'style'),
+         Output('tab-results-dashboard-content', 'style')],
+        [Input('tab-upload-files-nav', 'n_clicks'),
+         Input('tab-select-mode-nav', 'n_clicks'),
+         Input('tab-results-dashboard-nav', 'n_clicks')]
+    )
+    def display_tab_content(n_clicks_upload, n_clicks_mode, n_clicks_results):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            # Valor por defecto: mostrar la primera pestaña
+            return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if button_id == 'tab-upload-files-nav':
+            return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+        elif button_id == 'tab-select-mode-nav':
+            return {'display': 'none'}, {'display': 'block'}, {'display': 'none'}
+        elif button_id == 'tab-results-dashboard-nav':
+            return {'display': 'none'}, {'display': 'none'}, {'display': 'block'}
+        
+        # Fallback en caso de que algo inesperado ocurra
+        return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+
+
+    @dash_app.callback(
+        [Output('tab-upload-files-nav', 'active'),
+         Output('tab-select-mode-nav', 'active'),
+         Output('tab-results-dashboard-nav', 'active')],
+        [Input('tab-upload-files-nav', 'n_clicks'),
+         Input('tab-select-mode-nav', 'n_clicks'),
+         Input('tab-results-dashboard-nav', 'n_clicks')]
+    )
+    def update_tab_nav_links_active(n_clicks_upload, n_clicks_mode, n_clicks_results):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            # Valor por defecto: activar la primera pestaña
+            return True, False, False
+
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if button_id == 'tab-upload-files-nav':
+            return True, False, False
+        elif button_id == 'tab-select-mode-nav':
+            return False, True, False
+        elif button_id == 'tab-results-dashboard-nav':
+            return False, False, True
+        
+        # Fallback
+        return True, False, False
+
+
+    @dash_app.callback(
         Output('modal-content', 'style'),
         Output('modal-chunk-size', 'value'),
         Output('modal-score-correct', 'value'),
