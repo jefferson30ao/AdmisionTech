@@ -367,6 +367,16 @@ def setup_dash_callbacks(dash_app):
                 return []
         return dash.no_update
 
+    @dash_app.callback(
+        Output('benchmark-plot-iframe', 'src'),
+        Input('nav-benchmarking', 'n_clicks')
+    )
+    def update_benchmark_plot(n_clicks):
+        if n_clicks:
+            timestamp = int(time.time())
+            return f'/output/benchmark_plot.html?_={timestamp}'
+        return dash.no_update
+
     # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
     # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
     @dash_app.callback(

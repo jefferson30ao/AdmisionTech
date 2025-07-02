@@ -17,23 +17,6 @@ def create_sample_data(num_students, num_questions):
     
     return df_answers, series_key
 
-def generate_benchmark_plot():
-    try:
-        avg_times = pd.read_csv("data/benchmark_summary.csv")
-    except FileNotFoundError:
-        print("Advertencia: data/benchmark_summary.csv no encontrado. No se generará el gráfico.")
-        return
-
-    # Generar gráfico interactivo de speed-up con Plotly
-    fig = px.bar(avg_times, x='mode', y='speed_up', title='Speed-up de los Modos de Evaluación (vs. Serial)',
-                 labels={'mode': 'Modo de Evaluación', 'speed_up': 'Speed-up'})
-    fig.update_traces(marker_color='skyblue')
-    fig.update_layout(xaxis_title="Modo", yaxis_title="Speed-up")
-    
-    # Guardar gráfico en output/benchmark_plot.html
-    os.makedirs('output', exist_ok=True)
-    fig.write_html("output/benchmark_plot.html")
-    print(f"Gráfico de speed-up guardado en output/benchmark_plot.html")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ejecutar benchmarks para diferentes modos de evaluación.")

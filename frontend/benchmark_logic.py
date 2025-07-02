@@ -3,7 +3,26 @@ import pandas as pd
 import pyevalcore
 import numpy as np
 import os
+import plotly.express as px
 from frontend.evaluation_logic import run_serial, run_openmp, run_cuda, run_pthreads
+
+def generate_benchmark_plot():
+    try:
+        avg_times = pd.read_csv("data/benchmark_summary.csv")
+    except FileNotFoundError:
+        print("Advertencia: data/benchmark_summary.csv no encontrado. No se generará el gráfico.")
+        return
+
+    # Generar gráfico interactivo de speed-up con Plotly
+    fig = px.bar(avg_times, x='mode', y='speed_up', title='Speed-up de los Modos de Evaluación (vs. Serial)',
+                 labels={'mode': 'Modo de Evaluación', 'speed_up': 'Speed-up'})
+    fig.update_traces(marker_color='skyblue')
+    fig.update_layout(xaxis_title="Modo", yaxis_title="Speed-up")
+    
+    # Guardar gráfico en output/benchmark_plot.html
+    os.makedirs('output', exist_ok=True)
+    fig.write_html("output/benchmark_plot.html")
+    print(f"Gráfico de speed-up guardado en output/benchmark_plot.html")
 
 def run_full_benchmark(students_df: pd.DataFrame, key_series: pd.Series, scoring_rules: dict, modes_to_run: list = None):
     """
@@ -49,3 +68,6 @@ def run_full_benchmark(students_df: pd.DataFrame, key_series: pd.Series, scoring
     os.makedirs('data', exist_ok=True)
     df.to_csv("data/benchmark_summary.csv", index=False)
     print(f"Resultados de benchmark actualizados en data/benchmark_summary.csv")
+
+    # Generar el gráfico después de actualizar los datos
+    generate_benchmark_plot()
