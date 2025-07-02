@@ -5,6 +5,7 @@ import base64
 import io
 import pandas as pd
 import plotly.express as px
+import time
 import json # Importar json para la función save_config
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
@@ -342,7 +343,9 @@ def setup_dash_callbacks(dash_app):
     def load_benchmark_data(n_clicks):
         if n_clicks: # Activado cuando se hace clic en la pestaña Benchmarking
             try:
-                response = requests.get("http://127.0.0.1:8000/benchmark/data")
+                # Cache busting by adding a timestamp
+                timestamp = int(time.time())
+                response = requests.get(f"http://127.0.0.1:8000/benchmark/data?_={timestamp}")
                 response_data = response.json()
                 if response_data.get("status") == "ok":
                     # Convertir tiempos a milisegundos y redondear speed-up
@@ -352,6 +355,7 @@ def setup_dash_callbacks(dash_app):
                         df['Speed-up'] = df['speed_up'].round(2)
                         # Seleccionar y reordenar columnas para la tabla
                         df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']]
+                        df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']].copy()
                         df_display.rename(columns={'mode': 'Modo'}, inplace=True)
                         return df_display.to_dict(orient='records')
                     return []
@@ -364,43 +368,34 @@ def setup_dash_callbacks(dash_app):
         return dash.no_update
 
     # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
+    # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
     @dash_app.callback(
         [Output(f"nav-{item['id']}", "active") for item in nav_items],
         [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
-        [State(f"nav-{item['id']}", "active") for item in nav_items]
     )
-    def toggle_active_nav_link(*args):
+    def toggle_active_nav_link(*n_clicks_args):
         ctx = dash.callback_context
         if not ctx.triggered:
-            # Por defecto, activar la primera pestaña al inicio
             active_states = [False] * len(nav_items)
-            active_states[0] = True
+            active_states[0] = True # Activar la primera pestaña por defecto
             return active_states
         
-        # Obtener el ID del botón que disparó el callback
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
-        
-        # Crear una lista de estados activos, inicialmente todos falsos
         active_states = [False] * len(nav_items)
-        
-        # Encontrar el índice del elemento de navegación que disparó el callback
-        # y establecer su estado activo en True
         for i, item in enumerate(nav_items):
             if f"nav-{item['id']}" == button_id:
                 active_states[i] = True
                 break
-                
         return active_states
 
-    # Callback para mostrar el contenido principal según la selección del sidebar
     @dash_app.callback(
         Output("main-content", "children"),
         [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
     )
-    def display_content(*args):
+    def display_content(*n_clicks_args):
         ctx = dash.callback_context
         if not ctx.triggered:
-            # Valor por defecto al cargar la página
+            # Al cargar la página, mostrar el contenido de la primera pestaña por defecto
             return content_evaluacion()
         
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
