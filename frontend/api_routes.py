@@ -19,6 +19,9 @@ def setup_api_routes(app: FastAPI):
             key_content = await key_file.read()
 
             app.state.students_df = pd.read_excel(io.BytesIO(students_content))
+            # Renombrar la columna 'DNI' a 'student_id' para que coincida con la lógica de evaluación
+            if 'DNI' in app.state.students_df.columns:
+                app.state.students_df.rename(columns={'DNI': 'student_id'}, inplace=True)
             app.state.key_df = pd.read_excel(io.BytesIO(key_content))
             logger.log("INFO", "file_upload", "Archivos cargados exitosamente.", extra={"students_file": students_file.filename, "key_file": key_file.filename})
             return {"status": "ok"}

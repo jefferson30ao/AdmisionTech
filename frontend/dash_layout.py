@@ -181,7 +181,8 @@ def content_evaluacion():
                                 dash_table.DataTable(
                                     id='results-table',
                                     columns=[
-                                        {"name": "ID Estudiante", "id": "student_id"},
+                                        {"name": "ID", "id": "ID"},
+                                        {"name": "DNI", "id": "DNI"},
                                         {"name": "Puntuación", "id": "score"},
                                         {"name": "Correctas", "id": "correct"},
                                         {"name": "Incorrectas", "id": "wrong"},

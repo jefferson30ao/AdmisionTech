@@ -73,13 +73,39 @@ def setup_dash_callbacks(dash_app):
                         html.P(f"Respuestas en Blanco Promedio: {metrics.get('average_blank'):.2f}"),
                     ])
 
-                    scores = [res['score'] for res in results]
+                    # Convertir resultados a DataFrame para manipulación
+                    df_results = pd.DataFrame(results)
+
+                    # Añadir columna 'ID' como índice + 1
+                    df_results.insert(0, 'ID', range(1, 1 + len(df_results)))
+
+                    # Renombrar 'student_id' a 'DNI'
+                    df_results.rename(columns={'student_id': 'DNI'}, inplace=True)
+
+                    # Reordenar columnas para que DNI esté después de ID
+                    # Asegurarse de que todas las columnas esperadas estén presentes antes de reordenar
+                    # Lista de columnas esperadas en el orden deseado
+                    ordered_columns = ['ID', 'DNI', 'score', 'correct', 'wrong', 'blank']
+                    # Filtrar las columnas que realmente existen en el DataFrame
+                    existing_ordered_columns = [col for col in ordered_columns if col in df_results.columns]
+                    df_results = df_results[existing_ordered_columns]
+
+                    metrics_display = html.Div([
+                        html.P(f"Total de Estudiantes: {metrics.get('total_students')}"),
+                        html.P(f"Puntuación Promedio: {metrics.get('average_score'):.2f}"),
+                        html.P(f"Respuestas Correctas Promedio: {metrics.get('average_correct'):.2f}"),
+                        html.P(f"Respuestas Incorrectas Promedio: {metrics.get('average_wrong'):.2f}"),
+                        html.P(f"Respuestas en Blanco Promedio: {metrics.get('average_blank'):.2f}"),
+                    ])
+
+                    scores = df_results['score'].tolist() # Usar la columna 'score' del DataFrame
                     if scores:
                         fig = px.histogram(x=scores, nbins=20, title="Distribución de Puntuaciones")
                     else:
                         fig = {} # Empty figure if no data
 
-                    return results, metrics_display, fig, html.Div("Evaluación completada exitosamente.")
+                    # Convertir el DataFrame de nuevo a formato de lista de diccionarios para Dash DataTable
+                    return df_results.to_dict(orient='records'), metrics_display, fig, html.Div("Evaluación completada exitosamente.")
                 else:
                     return [], html.Div(), {}, html.Div(f"Error en la evaluación: {response_data.get('message', 'Error desconocido')}", style={'color': 'red'})
             except Exception as e:
