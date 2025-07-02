@@ -1,0 +1,295 @@
+import dash
+from dash import html, dcc, Input, Output, State
+import requests
+import base64
+import io
+import pandas as pd
+import plotly.express as px
+import json # Importar json para la función save_config
+
+# Importar load_scoring_config para asegurar que esté disponible
+from frontend.config_utils import load_scoring_config
+from frontend.dash_layout import content_evaluacion, content_historial, content_configuracion, content_ayuda, content_benchmarking, nav_items
+
+# Callbacks para la pestaña de Evaluación
+def setup_dash_callbacks(dash_app):
+    @dash_app.callback(
+        Output('output-upload-status', 'children'),
+        Input('upload-students-data', 'contents'),
+        Input('upload-key-data', 'contents'),
+        State('upload-students-data', 'filename'),
+        State('upload-key-data', 'filename')
+    )
+    def upload_data(students_contents, key_contents, students_filename, key_filename):
+        if students_contents is not None and key_contents is not None:
+            try:
+                students_decoded = students_contents.encode('utf8').split(b';base64,')[1]
+                key_decoded = key_contents.encode('utf8').split(b';base64,')[1]
+
+                students_bytes = base64.b64decode(students_decoded)
+                key_bytes = base64.b64decode(key_decoded)
+
+                files = {
+                    'students_file': (students_filename, students_bytes, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'),
+                    'key_file': (key_filename, key_bytes, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+                }
+                response = requests.post("http://127.0.0.1:8000/upload", files=files)
+                response_data = response.json()
+
+                if response_data.get("status") == "ok":
+                    return html.Div(f"Archivos '{students_filename}' y '{key_filename}' cargados exitosamente.")
+                else:
+                    return html.Div(f"Error al cargar archivos: {response_data.get('message', 'Error desconocido')}", style={'color': 'red'})
+            except Exception as e:
+                return html.Div(f"Error en el procesamiento de carga: {str(e)}", style={'color': 'red'})
+        return html.Div("Cargue ambos archivos para continuar.")
+
+    @dash_app.callback(
+        Output('results-table', 'data'),
+        Output('metrics-output', 'children'),
+        Output('score-histogram', 'figure'),
+        Output('output-run-status', 'children'),
+        Input('run-button', 'n_clicks'),
+        State('mode-selector', 'value'),
+    )
+    def run_evaluation_callback(n_clicks, mode):
+        if n_clicks > 0:
+            try:
+                data = {
+                    'mode': mode
+                }
+                response = requests.post("http://127.0.0.1:8000/run", data=data)
+                response_data = response.json()
+
+                if response_data.get("status") == "ok":
+                    results = response_data.get("results", [])
+                    metrics = response_data.get("metrics", {})
+
+                    metrics_display = html.Div([
+                        html.P(f"Total de Estudiantes: {metrics.get('total_students')}"),
+                        html.P(f"Puntuación Promedio: {metrics.get('average_score'):.2f}"),
+                        html.P(f"Respuestas Correctas Promedio: {metrics.get('average_correct'):.2f}"),
+                        html.P(f"Respuestas Incorrectas Promedio: {metrics.get('average_wrong'):.2f}"),
+                        html.P(f"Respuestas en Blanco Promedio: {metrics.get('average_blank'):.2f}"),
+                    ])
+
+                    scores = [res['score'] for res in results]
+                    if scores:
+                        fig = px.histogram(x=scores, nbins=20, title="Distribución de Puntuaciones")
+                    else:
+                        fig = {} # Empty figure if no data
+
+                    return results, metrics_display, fig, html.Div("Evaluación completada exitosamente.")
+                else:
+                    return [], html.Div(), {}, html.Div(f"Error en la evaluación: {response_data.get('message', 'Error desconocido')}", style={'color': 'red'})
+            except Exception as e:
+                return [], html.Div(), {}, html.Div(f"Error en el procesamiento de evaluación: {str(e)}", style={'color': 'red'})
+        return [], html.Div(), {}, html.Div("Presione 'Iniciar Evaluación' para ver los resultados.")
+
+
+    @dash_app.callback(
+        Output('modal-content', 'style'),
+        Output('modal-chunk-size', 'value'),
+        Output('modal-score-correct', 'value'),
+        Output('modal-score-wrong', 'value'),
+        Output('modal-score-blank', 'value'),
+        Input('open-config-modal', 'n_clicks'),
+        Input('close-config-modal', 'n_clicks'),
+        State('scoring-config-store', 'data')
+    )
+    def toggle_config_modal(open_clicks, close_clicks, current_config):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise dash.exceptions.PreventUpdate
+
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if button_id == 'open-config-modal' and open_clicks > 0:
+            return {'display': 'block', 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'backgroundColor': 'white', 'padding': '20px', 'border': '1px solid #ccc', 'zIndex': '1000', 'boxShadow': '0 4px 8px 0 rgba(0,0,0,0.2)'}, \
+                   current_config['chunk_size'], current_config['scoring']['correct'], current_config['scoring']['wrong'], current_config['scoring']['blank']
+        elif button_id == 'close-config-modal' and close_clicks > 0:
+            return {'display': 'none'}, \
+                   current_config['chunk_size'], current_config['scoring']['correct'], current_config['scoring']['wrong'], current_config['scoring']['blank']
+        
+        raise dash.exceptions.PreventUpdate
+
+
+    @dash_app.callback(
+        Output('config-save-status', 'children'),
+        Output('scoring-config-store', 'data'),
+        Output('score-correct', 'value'),
+        Output('score-wrong', 'value'),
+        Output('score-blank', 'value'),
+        Input('save-config-button', 'n_clicks'),
+        State('modal-chunk-size', 'value'),
+        State('modal-score-correct', 'value'),
+        State('modal-score-wrong', 'value'),
+        State('modal-score-blank', 'value')
+    )
+    def save_config(n_clicks, chunk_size, correct, wrong, blank):
+        if n_clicks > 0:
+            updated_config = {
+                "chunk_size": chunk_size,
+                "scoring": {
+                    "correct": correct,
+                    "wrong": wrong,
+                    "blank": blank
+                }
+            }
+            try:
+                with open("data/scoring.json", "w") as f:
+                    json.dump(updated_config, f, indent=2)
+                return html.Div("Configuración guardada exitosamente.", style={'color': 'green'}), \
+                       updated_config, correct, wrong, blank
+            except Exception as e:
+                return html.Div(f"Error al guardar la configuración: {str(e)}", style={'color': 'red'}), \
+                       dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return "", dash.no_update, dash.no_update, dash.no_update, dash.no_update
+
+
+    # Callbacks para la pestaña de Historial de Logs
+    @dash_app.callback(
+        Output('log-date-dropdown', 'options'),
+        Output('log-date-dropdown', 'value'),
+        Input('nav-historial', 'n_clicks') # Cambiado de tabs-main a nav-historial
+    )
+    def load_log_dates(n_clicks):
+        if n_clicks: # Activado cuando se hace clic en la pestaña Historial
+            try:
+                response = requests.get("http://127.0.0.1:8000/logs/list")
+                response_data = response.json()
+                dates = response_data.get("dates", [])
+                options = [{'label': date, 'value': date} for date in dates]
+                return options, dates[0] if dates else None
+            except Exception as e:
+                print(f"Error al cargar fechas de logs: {e}")
+                return [], None
+        return dash.no_update, dash.no_update
+
+    @dash_app.callback(
+        Output('log-files-table', 'data'),
+        Output('log-history-status', 'children'),
+        Input('log-date-dropdown', 'value')
+    )
+    def update_log_files_table(selected_date):
+        if selected_date:
+            try:
+                response = requests.get("http://127.0.0.1:8000/logs/list")
+                response_data = response.json()
+                files_by_date = response_data.get("files", {})
+                log_files = files_by_date.get(selected_date, [])
+                
+                data = []
+                for filename in log_files:
+                    download_jsonl_url = f"http://127.0.0.1:8000/logs/download/{selected_date}/{filename}"
+                    download_csv_url = f"http://127.0.0.1:8000/logs/download/{selected_date}/{filename}?format=csv"
+                    
+                    data.append({
+                        "filename": filename,
+                        "download_jsonl": f"[Descargar JSONL]({download_jsonl_url})",
+                        "download_csv": f"[Descargar CSV]({download_csv_url})"
+                    })
+                
+                if not data:
+                    return [], html.Div("No hay archivos de log para la fecha seleccionada.")
+                return data, ""
+            except Exception as e:
+                return [], html.Div(f"Error al cargar archivos de log: {str(e)}", style={'color': 'red'})
+        return [], html.Div("Seleccione una fecha para ver los archivos de log.")
+
+    @dash_app.callback(
+        Output('benchmark-table', 'data'),
+        Input('nav-benchmarking', 'n_clicks') # Cambiado de tabs-main a nav-benchmarking
+    )
+    def load_benchmark_data(n_clicks):
+        if n_clicks: # Activado cuando se hace clic en la pestaña Benchmarking
+            try:
+                response = requests.get("http://127.0.0.1:8000/benchmark/data")
+                response_data = response.json()
+                if response_data.get("status") == "ok":
+                    # Convertir tiempos a milisegundos y redondear speed-up
+                    df = pd.DataFrame(response_data.get("data", []))
+                    if not df.empty:
+                        df['Tiempo (ms)'] = (df['time'] * 1000).round(2)
+                        df['Speed-up'] = df['speed_up'].round(2)
+                        # Seleccionar y reordenar columnas para la tabla
+                        df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']]
+                        return df_display.to_dict(orient='records')
+                    return []
+                else:
+                    print(f"Error al cargar datos de benchmarking: {response_data.get('message', 'Error desconocido')}")
+                    return []
+            except Exception as e:
+                print(f"Error en el procesamiento de carga de datos de benchmarking: {str(e)}")
+                return []
+        return dash.no_update
+
+    # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
+    @dash_app.callback(
+        [Output(f"nav-{item['id']}", "active") for item in nav_items],
+        [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
+        [State(f"nav-{item['id']}", "active") for item in nav_items]
+    )
+    def toggle_active_nav_link(*args):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            # Por defecto, activar la primera pestaña al inicio
+            active_states = [False] * len(nav_items)
+            active_states[0] = True
+            return active_states
+        
+        # Obtener el ID del botón que disparó el callback
+        button_id = ctx.triggered[0]["prop_id"].split(".")[0]
+        
+        # Crear una lista de estados activos, inicialmente todos falsos
+        active_states = [False] * len(nav_items)
+        
+        # Encontrar el índice del elemento de navegación que disparó el callback
+        # y establecer su estado activo en True
+        for i, item in enumerate(nav_items):
+            if f"nav-{item['id']}" == button_id:
+                active_states[i] = True
+                break
+                
+        return active_states
+
+    # Callback para mostrar el contenido principal según la selección del sidebar
+    @dash_app.callback(
+        Output("main-content", "children"),
+        [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
+    )
+    def display_content(*args):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            # Valor por defecto al cargar la página
+            return content_evaluacion()
+        
+        button_id = ctx.triggered[0]["prop_id"].split(".")[0]
+        section = button_id.replace("nav-", "")
+
+        if section == "evaluacion":
+            return content_evaluacion()
+        elif section == "historial":
+            return content_historial()
+        elif section == "configuracion":
+            return content_configuracion()
+        elif section == "benchmarking":
+            return content_benchmarking()
+        elif section == "ayuda":
+            return content_ayuda()
+        return html.P("Seleccione una sección")
+
+    # Callback para el botón de alternar sidebar
+    @dash_app.callback(
+        Output("sidebar-column", "width"),
+        Output("sidebar-column", "style"),
+        Output("page-content", "width"),
+        Input("sidebar-toggle", "n_clicks"),
+        State("sidebar-column", "width"),
+        State("sidebar-column", "style")
+    )
+    def toggle_sidebar(n_clicks, current_width, current_style):
+        if n_clicks and n_clicks % 2 != 0: # Si n_clicks es impar, ocultar sidebar
+            return 0, {'display': 'none'}, 12
+        else: # Si n_clicks es par (o inicial), mostrar sidebar
+            return 3, {'display': 'block'}, 9

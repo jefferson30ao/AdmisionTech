@@ -20,8 +20,10 @@ class CustomBuildExt(_build_ext):
                 output_obj = os.path.join(self.build_temp, os.path.basename(s).replace('.cu', '.obj'))
                 
                 # CUDA compile arguments
+                # Asegurarse de que la ruta del archivo .cu sea absoluta
+                abs_s = os.path.abspath(s)
                 cuda_compile_args = [
-                    '-c', s, '-o', output_obj,
+                    '-c', abs_s, '-o', output_obj,
                     '-Xcompiler', '/EHsc,/MD', # For MSVC host compiler
                     '-I' + pybind11.get_include(),
                     '-I' + os.path.abspath('../../include')
@@ -52,8 +54,8 @@ class CustomBuildExt(_build_ext):
 ext_modules = [
     Pybind11Extension(
         "pyevalcore",
-        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp", "../../src/evaluator_openmp.cpp", "../../../src/evaluator_cuda.cu", "../../../src/evaluator_pthreads.cpp"],
-        include_dirs=[pybind11.get_include(), "../../include", os.path.join(os.path.abspath("../../.."), 'vcpkg/installed/x64-windows/include')],
+        ["pyevalcore_binding.cpp", "../../src/evaluator_serial.cpp", "../../src/evaluator_openmp.cpp", os.path.join(os.path.abspath("../.."), "src", "evaluator_cuda.cu"), os.path.join(os.path.abspath("../.."), "src", "evaluator_pthreads.cpp")],
+        include_dirs=[pybind11.get_include(), "../../include", os.path.join(os.path.abspath("../../.."), 'vcpkg/installed/x64-windows/include'), os.path.join(os.path.abspath("../../.."), 'vcpkg/installed/x64-windows/include/pthreads')],
         language="c++",
     ),
 ]
