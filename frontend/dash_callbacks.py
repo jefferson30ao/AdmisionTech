@@ -352,6 +352,7 @@ def setup_dash_callbacks(dash_app):
                         df['Speed-up'] = df['speed_up'].round(2)
                         # Seleccionar y reordenar columnas para la tabla
                         df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']]
+                        df_display.rename(columns={'mode': 'Modo'}, inplace=True)
                         return df_display.to_dict(orient='records')
                     return []
                 else:

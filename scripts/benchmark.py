@@ -58,6 +58,11 @@ def benchmark(modes, runs, num_students=1000, num_questions=100):
         print("Advertencia: El modo 'serial' no se encontró en los resultados. No se calculará el speed-up.")
         avg_times['speed_up'] = 1.0 # Default a 1 si serial no está presente, o manejar de otra forma
 
+    # Guardar resultados promediados y speed-up en un nuevo archivo
+    os.makedirs('data', exist_ok=True)
+    avg_times.to_csv("data/benchmark_summary.csv", index=False)
+    print(f"Resultados de benchmark promediados guardados en data/benchmark_summary.csv")
+
     # Generar gráfico interactivo de speed-up con Plotly
     fig = px.bar(avg_times, x='mode', y='speed_up', title='Speed-up de los Modos de Evaluación (vs. Serial)',
                  labels={'mode': 'Modo de Evaluación', 'speed_up': 'Speed-up'})

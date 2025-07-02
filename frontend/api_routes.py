@@ -159,11 +159,11 @@ def setup_api_routes(app: FastAPI):
     @app.get("/benchmark/data")
     async def get_benchmark_data():
         try:
-            df = pd.read_csv("data/benchmark.csv")
+            df = pd.read_csv("data/benchmark_summary.csv")
             return {"status": "ok", "data": df.to_dict(orient='records')}
         except FileNotFoundError:
-            logger.log("ERROR", "benchmark_data", "Archivo data/benchmark.csv no encontrado.")
-            return {"status": "error", "message": "Archivo data/benchmark.csv no encontrado."}, 404
+            logger.log("ERROR", "benchmark_data", "Archivo data/benchmark_summary.csv no encontrado.")
+            return {"status": "error", "message": "Archivo data/benchmark_summary.csv no encontrado."}, 404
         except Exception as e:
             logger.log("ERROR", "benchmark_data", f"Error al leer benchmark.csv: {str(e)}")
             return {"status": "error", "message": f"Error al leer benchmark.csv: {str(e)}"}, 500
