@@ -23,351 +23,628 @@ except Exception:
 
 # Definición de elementos de navegación
 nav_items = [
-    {"id": "evaluacion", "label": "Nueva Evaluación", "badge": "Nuevo"},
-    {"id": "historial", "label": "Historial de Ejecuciones"},
-    {"id": "configuracion", "label": "Configuración Global"},
-    {"id": "benchmarking", "label": "Benchmarking"}, # Nueva pestaña para benchmarking
-    {"id": "ayuda", "label": "Ayuda / Documentación"},
+    {"id": "evaluacion", "label": "Nueva Evaluación", "badge": "Nuevo", "icon": "🚀"},
+    {"id": "historial", "label": "Historial de Ejecuciones", "icon": "📊"},
+    {"id": "configuracion", "label": "Configuración Global", "icon": "⚙️"},
+    {"id": "benchmarking", "label": "Benchmarking", "icon": "⚡"},
+    {"id": "ayuda", "label": "Ayuda / Documentación", "icon": "❓"},
 ]
 
 def render_sidebar():
-    return dbc.Card([
-        dbc.CardHeader(
-            dbc.Row([
-                dbc.Col(html.Div(
-                    dbc.Button("\U0001F4CB", color="warning", className="rounded-circle text-white")), width="auto"),
-                dbc.Col([
-                    html.H5("Sistema de Evaluación", className="mb-0"),
-                    html.Small("Panel de Control", className="text-muted")
-                ])
-            ], align="center", className="g-2")
-        ),
-        dbc.CardBody([
-            html.H6("Navegación Principal", className="text-warning fw-bold"),
-            dbc.Nav([
-                dbc.NavLink([
-                    item["label"],
-                    dbc.Badge(item["badge"], color="warning", className="ms-auto") if "badge" in item else None
-                ], href="#", id=f"nav-{item['id']}", active="exact", className="text-dark")
+    return html.Div([
+        # Header del sidebar
+        html.Div([
+            html.Div([
+                html.Div("📋", className="fs-2 mb-2"),
+                html.H4("AdmisionTech", className="mb-1 fw-bold text-white"),
+                html.Small("Sistema de Evaluación", className="text-white-50")
+            ], className="text-center py-4")
+        ], className="bg-gradient text-white", style={
+            'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'borderRadius': '0 0 20px 20px',
+            'marginBottom': '2rem'
+        }),
+        
+        # Navegación
+        html.Div([
+            html.H6("Navegación", className="text-muted fw-bold mb-3 px-3"),
+            html.Div([
+                html.A([
+                    html.Div([
+                        html.Span(item["icon"], className="me-3 fs-5"),
+                        html.Span(item["label"], className="fw-medium"),
+                        dbc.Badge(item["badge"], color="primary", className="ms-auto rounded-pill") if "badge" in item else None
+                    ], className="d-flex align-items-center")
+                ], href="#", id=f"nav-{item['id']}", className="nav-link-modern text-decoration-none text-dark p-3 mb-2 rounded-3 d-block position-relative", style={
+                    'transition': 'all 0.3s ease',
+                    'border': '1px solid transparent'
+                })
                 for item in nav_items
-            ], vertical=True, pills=True)
-        ]),
-    ])
+            ], className="px-3")
+        ])
+    ], className="h-100", style={
+        'background': '#f8f9fa',
+        'borderRight': '1px solid #e9ecef'
+    })
 
 def render_header():
-    return dbc.Row([
-        dbc.Col(dbc.Button("☰", id="sidebar-toggle", outline=True, color="warning"), width="auto"),
-        dbc.Col(html.H4("AdmisionTech", className="mb-0 text-warning fw-bold"), width="auto"),
-        dbc.Col(dbc.Badge("Sistema Activo", color="warning", className="rounded-pill"), width="auto"),
-    ], className="border-bottom border-warning p-3 align-items-center")
+    return html.Div([
+        dbc.Row([
+            dbc.Col([
+                html.Div([
+                    html.H3("AdmisionTech", className="mb-0 fw-bold text-primary"),
+                    html.Small("Sistema de Evaluación Inteligente", className="text-muted")
+                ])
+            ]),
+            dbc.Col([
+                html.Div([
+                    dbc.Badge([
+                        html.I(className="fas fa-circle me-1", style={'fontSize': '8px', 'color': '#28a745'}),
+                        "Sistema Activo"
+                    ], color="light", className="text-success border border-success px-3 py-2 rounded-pill")
+                ], className="text-end")
+            ], width="auto")
+        ], className="align-items-center")
+    ], className="bg-white border-bottom p-4 shadow-sm")
 
 def content_evaluacion():
     return html.Div([
-        dbc.Row([
-            dbc.Col(html.H1("Nueva Evaluación", className="text-dark fw-bold")),
-        ], align="center"),
-        dbc.Row([
-            dbc.Col(
-                dbc.Nav(
-                    [
-                        dbc.NavLink("Cargar Archivos", id="tab-upload-files-nav", href="#", active=True, className="me-2"),
-                        dbc.NavLink("Seleccionar Modo", id="tab-select-mode-nav", href="#", className="me-2"),
-                        dbc.NavLink("Dashboard de Resultados", id="tab-results-dashboard-nav", href="#", className="me-2"),
-                    ],
-                    pills=True,
-                    className="nav-pills-custom mb-3"
-                ),
-                width=12
-            )
+        # Header de sección
+        html.Div([
+            html.H1([
+                html.Span("🚀", className="me-3"),
+                "Nueva Evaluación"
+            ], className="display-6 fw-bold text-dark mb-0"),
+            html.P("Configura y ejecuta evaluaciones de manera eficiente", className="text-muted fs-5 mb-0")
+        ], className="mb-5"),
+        
+        # Tabs navegación
+        html.Div([
+            dbc.Nav([
+                dbc.NavLink([
+                    html.Span("📁", className="me-2"),
+                    "Cargar Archivos"
+                ], id="tab-upload-files-nav", href="#", active=True, className="nav-tab-modern px-4 py-3 me-2"),
+                dbc.NavLink([
+                    html.Span("⚡", className="me-2"),
+                    "Configurar Modo"
+                ], id="tab-select-mode-nav", href="#", className="nav-tab-modern px-4 py-3 me-2"),
+                dbc.NavLink([
+                    html.Span("📊", className="me-2"),
+                    "Resultados"
+                ], id="tab-results-dashboard-nav", href="#", className="nav-tab-modern px-4 py-3"),
+            ], pills=True, className="nav-pills-modern mb-4")
         ]),
-        dbc.Row([
-            dbc.Col(
+        
+        # Contenido de tabs
+        html.Div([
+            # Tab 1: Upload Files
+            html.Div(id="tab-upload-files-content", style={'display': 'block'}, children=[
+                dbc.Row([
+                    dbc.Col([
+                        html.Div([
+                            # Header de la card
+                            html.Div([
+                                html.Div([
+                                    html.Span("📊", className="fs-2 text-primary me-3"),
+                                    html.Div([
+                                        html.H4("Respuestas de Postulantes", className="mb-1 fw-bold"),
+                                        html.P("Archivo Excel con DNI + 100 respuestas", className="text-muted mb-0 small")
+                                    ])
+                                ], className="d-flex align-items-center mb-4")
+                            ]),
+                            
+                            # Upload area
+                            dcc.Upload(
+                                id='upload-students-data',
+                                children=html.Div([
+                                    html.Div("📤", className="fs-1 text-primary mb-3"),
+                                    html.H5("Arrastra tu archivo aquí", className="text-primary fw-bold mb-2"),
+                                    html.P("o haz clic para seleccionar", className="text-muted mb-3"),
+                                    html.Small("Formatos soportados: .xlsx", className="text-muted")
+                                ], className="text-center py-5"),
+                                style={
+                                    'borderRadius': '15px',
+                                    'border': '2px dashed #6c63ff',
+                                    'background': 'linear-gradient(145deg, #f8f9ff 0%, #ffffff 100%)',
+                                    'cursor': 'pointer',
+                                    'transition': 'all 0.3s ease'
+                                },
+                                className="upload-area-modern"
+                            )
+                        ], className="modern-card p-4")
+                    ], width=6),
+                    
+                    dbc.Col([
+                        html.Div([
+                            # Header de la card
+                            html.Div([
+                                html.Div([
+                                    html.Span("🔑", className="fs-2 text-success me-3"),
+                                    html.Div([
+                                        html.H4("Clave de Respuestas", className="mb-1 fw-bold"),
+                                        html.P("Archivo con pregunta_id + respuesta_correcta", className="text-muted mb-0 small")
+                                    ])
+                                ], className="d-flex align-items-center mb-4")
+                            ]),
+                            
+                            # Upload area
+                            dcc.Upload(
+                                id='upload-key-data',
+                                children=html.Div([
+                                    html.Div("📤", className="fs-1 text-success mb-3"),
+                                    html.H5("Arrastra tu archivo aquí", className="text-success fw-bold mb-2"),
+                                    html.P("o haz clic para seleccionar", className="text-muted mb-3"),
+                                    html.Small("Formatos soportados: .xlsx", className="text-muted")
+                                ], className="text-center py-5"),
+                                style={
+                                    'borderRadius': '15px',
+                                    'border': '2px dashed #20c997',
+                                    'background': 'linear-gradient(145deg, #f8fff8 0%, #ffffff 100%)',
+                                    'cursor': 'pointer',
+                                    'transition': 'all 0.3s ease'
+                                },
+                                className="upload-area-modern"
+                            )
+                        ], className="modern-card p-4")
+                    ], width=6),
+                ], className="g-4"),
+                
+                html.Div(id='output-upload-status', className="mt-4"),
+            ]),
+            
+            # Tab 2: Select Mode
+            html.Div(id="tab-select-mode-content", style={'display': 'none'}, children=[
                 html.Div([
-                    html.Div(id="tab-upload-files-content", style={'display': 'block'}, children=[
-                        dbc.Row([
-                            dbc.Col(dbc.Card([
-                                dbc.CardHeader([
-                                    html.Div([
-                                        html.Img(src="/assets/excel_icon.svg", style={'width': '20px', 'marginRight': '5px'}),
-                                        html.H5("Respuestas de Postulantes", className="mb-0 d-inline-block")
-                                    ]),
-                                    html.Small("Archivo .xlsx con 101 columnas (DNI + 100 respuestas)", className="text-muted d-block")
-                                ], className="text-dark fw-bold"),
-                                dbc.CardBody([
-                                    dcc.Upload(
-                                        id='upload-students-data',
-                                        children=html.Div([
-                                            html.Img(src="/assets/upload_icon.svg", style={'width': '30px', 'marginBottom': '5px'}),
-                                            html.P("Arrastra o haz clic para cargar", className="mb-0")
-                                        ]),
-                                        style={
-                                            'width': '100%', 'height': '150px',
-                                            'borderWidth': '2px', 'borderStyle': 'dashed',
-                                            'borderRadius': '10px', 'textAlign': 'center', 'margin': '10px 0',
-                                            'borderColor': '#FFC107', 'backgroundColor': '#FFF8E1', 'cursor': 'pointer'
-                                        },
-                                        multiple=False,
-                                        className="d-flex flex-column justify-content-center align-items-center"
-                                    ),
-                                ]),
-                            ], className="h-100"), width=6),
-                            dbc.Col(dbc.Card([
-                                dbc.CardHeader([
-                                    html.Div([
-                                        html.Img(src="/assets/excel_icon.svg", style={'width': '20px', 'marginRight': '5px'}),
-                                        html.H5("Clave de Respuestas", className="mb-0 d-inline-block")
-                                    ]),
-                                    html.Small("Archivo .xlsx con 2 columnas (pregunta_id + respuesta_correcta)", className="text-muted d-block")
-                                ], className="text-dark fw-bold"),
-                                dbc.CardBody([
-                                    dcc.Upload(
-                                        id='upload-key-data',
-                                        children=html.Div([
-                                            html.Img(src="/assets/upload_icon.svg", style={'width': '30px', 'marginBottom': '5px'}),
-                                            html.P("Arrastra o haz clic para cargar", className="mb-0")
-                                        ]),
-                                        style={
-                                            'width': '100%', 'height': '150px',
-                                            'borderWidth': '2px', 'borderStyle': 'dashed',
-                                            'borderRadius': '10px', 'textAlign': 'center', 'margin': '10px 0',
-                                            'borderColor': '#FFC107', 'backgroundColor': '#FFF8E1', 'cursor': 'pointer'
-                                        },
-                                        multiple=False,
-                                        className="d-flex flex-column justify-content-center align-items-center"
-                                    ),
-                                ]),
-                            ], className="h-100"), width=6),
-                        ], className="g-4 mt-3"),
-                        html.Div(id='output-upload-status', className="mt-3"),
-                    ]),
-                    html.Div(id="tab-select-mode-content", style={'display': 'none'}, children=[
-                        dbc.Card([
-                            dbc.CardHeader(["\U0001F50D Configuración de Evaluación"], className="text-warning fw-bold"),
-                            dbc.CardBody([
-                                html.Div([
-                                    html.Label("Modo de Ejecución:"),
-                                    dcc.RadioItems(
-                                        id='mode-selector',
-                                        options=[
-                                            {'label': 'Serial', 'value': 'serial'},
-                                            {'label': 'OpenMP', 'value': 'openmp'},
-                                            {'label': 'Pthreads', 'value': 'pthreads'},
-                                            {'label': 'CUDA', 'value': 'cuda', 'disabled': not cuda_available}
-                                        ],
-                                        value='serial',
-                                        inline=True,
-                                        className="ms-3"
-                                    ),
-                                ], className="mb-3"),
-                                html.Div([
-                                    html.Label("Puntuación Correcta:"),
-                                    dcc.Input(id='score-correct', type='number', value=scoring_config['scoring']['correct'], className="me-2"),
-                                    html.Label("Puntuación Incorrecta:"),
-                                    dcc.Input(id='score-wrong', type='number', value=scoring_config['scoring']['wrong'], className="me-2"),
-                                    html.Label("Puntuación en Blanco:"),
-                                    dcc.Input(id='score-blank', type='number', value=scoring_config['scoring']['blank']),
-                                ], className="mb-3"),
-                                dbc.Button('Iniciar Evaluación', id='run-button', n_clicks=0, color="warning", className="text-white me-2"),
-                                dbc.Button('Configuración Avanzada', id='open-config-modal', n_clicks=0, outline=True, color="warning"),
-                                html.Div(id='output-run-status', className="mt-3"),
-                                dcc.Store(id='scoring-config-store', data=scoring_config),
-                            ]),
-                        ], className="h-100 mt-3")
-                    ]),
-                    html.Div(id="tab-results-dashboard-content", style={'display': 'none'}, children=[
-                        dbc.Card([
-                            dbc.CardHeader(["\U00002699 Resultados de la Evaluación"], className="text-warning fw-bold"),
-                            dbc.CardBody([
-                                dash_table.DataTable(
-                                    id='results-table',
-                                    columns=[
-                                        {"name": "ID", "id": "ID"},
-                                        {"name": "DNI", "id": "DNI"},
-                                        {"name": "Puntuación", "id": "score"},
-                                        {"name": "Correctas", "id": "correct"},
-                                        {"name": "Incorrectas", "id": "wrong"},
-                                        {"name": "Blancas", "id": "blank"},
+                    html.Div([
+                        html.Div([
+                            html.Span("⚙️", className="fs-2 text-warning me-3"),
+                            html.H4("Configuración de Evaluación", className="mb-0 fw-bold")
+                        ], className="d-flex align-items-center mb-4"),
+                        
+                        # Modo de ejecución
+                        html.Div([
+                            html.H5("Modo de Ejecución", className="fw-bold mb-3 text-dark"),
+                            html.Div([
+                                dcc.RadioItems(
+                                    id='mode-selector',
+                                    options=[
+                                        {'label': html.Div(['⚡ Serial'], className="mode-option"), 'value': 'serial'},
+                                        {'label': html.Div(['🔥 OpenMP'], className="mode-option"), 'value': 'openmp'},
+                                        {'label': html.Div(['🧵 Pthreads'], className="mode-option"), 'value': 'pthreads'},
+                                        {'label': html.Div(['🚀 CUDA'], className="mode-option text-muted" if not cuda_available else "mode-option"), 'value': 'cuda', 'disabled': not cuda_available}
                                     ],
-                                    data=[],
-                                    page_size=10,
-                                    style_table={'overflowX': 'auto'},
-                                    style_cell={'textAlign': 'left', 'padding': '5px'},
-                                    style_header={
-                                        'backgroundColor': 'rgb(230, 230, 230)',
-                                        'fontWeight': 'bold'
-                                    }
-                                ),
-                                html.Div(id='metrics-output', className="mt-3"),
-                                dbc.Row([
-                                    dbc.Col(dbc.Button("Descargar Resultados (CSV)", id="download-results-button", color="success", className="mt-3 mb-3 me-2"), width="auto"),
-                                    dbc.Col(dbc.Button("Descargar Resultados (PDF)", id="download-pdf-button", color="danger", className="mt-3 mb-3"), width="auto"),
-                                ], className="g-0"),
-                                dcc.Download(id="download-dataframe-csv"),
-                                dcc.Download(id="download-dataframe-pdf"),
-                                dcc.Graph(id='score-histogram'),
-                            ]),
-                        ], className="h-100 mt-3")
-                    ]),
-                ]),
-                width=12
-            )
-        ], className="g-4 mt-3"),
-        html.Div(id='modal-content', children=[
-            dbc.Card([
-                dbc.CardHeader(html.H3("Configuración Avanzada")),
-                dbc.CardBody([
+                                    value='serial',
+                                    className="mode-selector-modern",
+                                    labelStyle={'display': 'block', 'margin': '10px 0'}
+                                )
+                            ], className="p-3 bg-light rounded-3")
+                        ], className="mb-4"),
+                        
+                        # Configuración de puntuación
+                        html.Div([
+                            html.H5("Configuración de Puntuación", className="fw-bold mb-3 text-dark"),
+                            dbc.Row([
+                                dbc.Col([
+                                    html.Label("Respuesta Correcta", className="form-label fw-medium text-success"),
+                                    dcc.Input(
+                                        id='score-correct', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['correct'], 
+                                        className="form-control form-control-modern",
+                                        style={'borderColor': '#28a745'}
+                                    )
+                                ], width=4),
+                                dbc.Col([
+                                    html.Label("Respuesta Incorrecta", className="form-label fw-medium text-danger"),
+                                    dcc.Input(
+                                        id='score-wrong', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['wrong'], 
+                                        className="form-control form-control-modern",
+                                        style={'borderColor': '#dc3545'}
+                                    )
+                                ], width=4),
+                                dbc.Col([
+                                    html.Label("Respuesta en Blanco", className="form-label fw-medium text-secondary"),
+                                    dcc.Input(
+                                        id='score-blank', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['blank'], 
+                                        className="form-control form-control-modern",
+                                        style={'borderColor': '#6c757d'}
+                                    )
+                                ], width=4),
+                            ], className="g-3")
+                        ], className="p-3 bg-light rounded-3 mb-4"),
+                        
+                        # Botones de acción
+                        html.Div([
+                            dbc.Button([
+                                html.Span("🚀", className="me-2"),
+                                "Iniciar Evaluación"
+                            ], id='run-button', n_clicks=0, className="btn-modern-primary me-3 px-4 py-3"),
+                            dbc.Button([
+                                html.Span("⚙️", className="me-2"),
+                                "Configuración Avanzada"
+                            ], id='open-config-modal', n_clicks=0, className="btn-modern-outline px-4 py-3"),
+                        ], className="d-flex"),
+                        
+                        html.Div(id='output-run-status', className="mt-4"),
+                        dcc.Store(id='scoring-config-store', data=scoring_config),
+                    ])
+                ], className="modern-card p-4")
+            ]),
+            
+            # Tab 3: Results Dashboard
+            html.Div(id="tab-results-dashboard-content", style={'display': 'none'}, children=[
+                html.Div([
                     html.Div([
-                        html.Label("Chunk Size:"),
-                        dcc.Input(id='modal-chunk-size', type='number', value=scoring_config['chunk_size']),
-                    ], className="mb-3"),
+                        html.Span("📈", className="fs-2 text-info me-3"),
+                        html.H4("Dashboard de Resultados", className="mb-0 fw-bold")
+                    ], className="d-flex align-items-center mb-4"),
+                    
+                    # Tabla de resultados
                     html.Div([
-                        html.H4("Reglas de Puntuación"),
-                        html.Label("Correctas:"),
-                        dcc.Input(id='modal-score-correct', type='number', value=scoring_config['scoring']['correct']),
-                        html.Label("Incorrectas:"),
-                        dcc.Input(id='modal-score-wrong', type='number', value=scoring_config['scoring']['wrong']),
-                        html.Label("En Blanco:"),
-                        dcc.Input(id='modal-score-blank', type='number', value=scoring_config['scoring']['blank']),
-                    ], className="mb-3"),
-                    dbc.Button('Guardar Configuración', id='save-config-button', n_clicks=0, color="warning", className="text-white me-2"),
-                    dbc.Button('Cerrar', id='close-config-modal', n_clicks=0, outline=True, color="secondary"),
-                    html.Div(id='config-save-status', className="mt-3")
-                ])
-            ])
-        ], style={'display': 'none', 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'backgroundColor': 'white', 'padding': '20px', 'border': '1px solid #ccc', 'zIndex': '1000', 'boxShadow': '0 4px 8px 0 rgba(0,0,0,0.2)'}),
+                        dash_table.DataTable(
+                            id='results-table',
+                            columns=[
+                                {"name": "ID", "id": "ID"},
+                                {"name": "DNI", "id": "DNI"},
+                                {"name": "Puntuación", "id": "score"},
+                                {"name": "Correctas", "id": "correct"},
+                                {"name": "Incorrectas", "id": "wrong"},
+                                {"name": "Blancas", "id": "blank"},
+                            ],
+                            data=[],
+                            page_size=10,
+                            style_table={'overflowX': 'auto'},
+                            style_cell={
+                                'textAlign': 'left', 
+                                'padding': '12px',
+                                'fontFamily': 'Inter, sans-serif',
+                                'border': '1px solid #e9ecef'
+                            },
+                            style_header={
+                                'backgroundColor': '#f8f9fa',
+                                'fontWeight': 'bold',
+                                'color': '#495057',
+                                'border': '1px solid #dee2e6'
+                            },
+                            style_data={
+                                'backgroundColor': 'white',
+                                'color': '#212529'
+                            },
+                            style_data_conditional=[
+                                {
+                                    'if': {'row_index': 'odd'},
+                                    'backgroundColor': '#f8f9fa'
+                                }
+                            ]
+                        )
+                    ], className="mb-4"),
+                    
+                    html.Div(id='metrics-output', className="mb-4"),
+                    
+                    # Botones de descarga
+                    html.Div([
+                        dbc.Button([
+                            html.Span("📊", className="me-2"),
+                            "Descargar CSV"
+                        ], id="download-results-button", className="btn-modern-success me-3"),
+                        dbc.Button([
+                            html.Span("📄", className="me-2"),
+                            "Descargar PDF"
+                        ], id="download-pdf-button", className="btn-modern-danger"),
+                    ], className="mb-4"),
+                    
+                    dcc.Download(id="download-dataframe-csv"),
+                    dcc.Download(id="download-dataframe-pdf"),
+                    
+                    # Gráfico
+                    html.Div([
+                        dcc.Graph(id='score-histogram', className="rounded-3")
+                    ], className="bg-white p-3 rounded-3 shadow-sm")
+                    
+                ], className="modern-card p-4")
+            ]),
+        ]),
+        
+        # Modal de configuración avanzada
+        html.Div(children=[
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.H3([
+                            html.Span("⚙️", className="me-3"),
+                            "Configuración Avanzada"
+                        ], className="fw-bold text-dark mb-0")
+                    ], className="modal-header-modern p-4 border-bottom"),
+                    
+                    html.Div([
+                        html.Div([
+                            html.Label("Chunk Size", className="form-label fw-medium"),
+                            dcc.Input(
+                                id='modal-chunk-size', 
+                                type='number', 
+                                value=scoring_config['chunk_size'],
+                                className="form-control form-control-modern"
+                            ),
+                        ], className="mb-4"),
+                        
+                        html.Div([
+                            html.H5("Reglas de Puntuación", className="fw-bold mb-3"),
+                            dbc.Row([
+                                dbc.Col([
+                                    html.Label("Correctas", className="form-label fw-medium text-success"),
+                                    dcc.Input(
+                                        id='modal-score-correct', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['correct'],
+                                        className="form-control form-control-modern"
+                                    ),
+                                ], width=4),
+                                dbc.Col([
+                                    html.Label("Incorrectas", className="form-label fw-medium text-danger"),
+                                    dcc.Input(
+                                        id='modal-score-wrong', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['wrong'],
+                                        className="form-control form-control-modern"
+                                    ),
+                                ], width=4),
+                                dbc.Col([
+                                    html.Label("En Blanco", className="form-label fw-medium text-secondary"),
+                                    dcc.Input(
+                                        id='modal-score-blank', 
+                                        type='number', 
+                                        value=scoring_config['scoring']['blank'],
+                                        className="form-control form-control-modern"
+                                    ),
+                                ], width=4),
+                            ], className="g-3")
+                        ], className="mb-4"),
+                        
+                        html.Div([
+                            dbc.Button([
+                                html.Span("💾", className="me-2"),
+                                "Guardar Configuración"
+                            ], id='save-config-button', n_clicks=0, className="btn-modern-primary me-3"),
+                            dbc.Button("Cerrar", id='close-config-modal', n_clicks=0, className="btn-modern-outline"),
+                        ]),
+                        
+                        html.Div(id='config-save-status', className="mt-3")
+                    ], className="p-4")
+                ], className="bg-white rounded-4 shadow-lg", style={'width': '600px', 'maxWidth': '90vw'})
+            ], className="modal-backdrop-modern")
+        ], id="modal-container", style={'display': 'none'})
     ])
 
 def content_historial():
     return html.Div([
-        html.H1("Historial de Ejecuciones", className="text-dark fw-bold"),
-        dbc.Card([
-            dbc.CardHeader("Logs de Evaluación", className="text-warning fw-bold"),
-            dbc.CardBody([
-                dbc.Row([
-                    dbc.Col([
-                        dbc.Label("Seleccionar Fecha:"),
-                        dcc.Dropdown(
-                            id='log-date-dropdown',
-                            options=[],
-                            placeholder="Selecciona una fecha",
-                            className="mb-3"
-                        ),
-                    ]),
-                ]),
-                html.Div([
-                    dbc.Label("Archivos de Log:"),
-                    dash_table.DataTable(
-                        id='log-files-table',
-                        columns=[
-                            {"name": "Archivo", "id": "filename"},
-                            {"name": "Descargar JSONL", "id": "download_jsonl", "presentation": "markdown"},
-                            {"name": "Descargar CSV", "id": "download_csv", "presentation": "markdown"},
-                        ],
-                        data=[],
-                        page_size=10,
-                        style_table={'overflowX': 'auto', 'margin-top': '10px'},
-                        style_cell={'textAlign': 'left', 'padding': '5px'},
-                        style_header={
-                            'backgroundColor': 'rgb(230, 230, 230)',
-                            'fontWeight': 'bold'
-                        }
+        html.Div([
+            html.H1([
+                html.Span("📊", className="me-3"),
+                "Historial de Ejecuciones"
+            ], className="display-6 fw-bold text-dark mb-0"),
+            html.P("Revisa y descarga logs de evaluaciones anteriores", className="text-muted fs-5 mb-0")
+        ], className="mb-5"),
+        
+        html.Div([
+            html.Div([
+                html.Span("📋", className="fs-2 text-primary me-3"),
+                html.H4("Logs de Evaluación", className="mb-0 fw-bold")
+            ], className="d-flex align-items-center mb-4"),
+            
+            dbc.Row([
+                dbc.Col([
+                    html.Label("Seleccionar Fecha:", className="form-label fw-medium"),
+                    dcc.Dropdown(
+                        id='log-date-dropdown',
+                        options=[],
+                        placeholder="Selecciona una fecha",
+                        className="dropdown-modern mb-3"
                     ),
-                    html.Div(id='log-history-status', className="mt-3"),
-                ])
+                ]),
+            ]),
+            
+            html.Div([
+                html.Label("Archivos de Log:", className="form-label fw-medium mb-3"),
+                dash_table.DataTable(
+                    id='log-files-table',
+                    columns=[
+                        {"name": "Archivo", "id": "filename"},
+                        {"name": "Descargar JSONL", "id": "download_jsonl", "presentation": "markdown"},
+                        {"name": "Descargar CSV", "id": "download_csv", "presentation": "markdown"},
+                    ],
+                    data=[],
+                    page_size=10,
+                    style_table={'overflowX': 'auto'},
+                    style_cell={
+                        'textAlign': 'left', 
+                        'padding': '12px',
+                        'fontFamily': 'Inter, sans-serif',
+                        'border': '1px solid #e9ecef'
+                    },
+                    style_header={
+                        'backgroundColor': '#f8f9fa',
+                        'fontWeight': 'bold',
+                        'color': '#495057'
+                    }
+                ),
+                html.Div(id='log-history-status', className="mt-3"),
             ])
-        ])
+        ], className="modern-card p-4")
     ])
 
 def content_configuracion():
     return html.Div([
-        html.H1("Configuración Global", className="text-dark fw-bold"),
-        dbc.Card([
-            dbc.CardBody([
-                dbc.Row([
-                    dbc.Col([
-                        dbc.Label("Idioma"),
-                        dcc.Dropdown(options=[{"label": i, "value": i} for i in ["Español", "English"]], value="Español")
-                    ]),
-                    dbc.Col([
-                        dbc.Label("Zona Horaria"),
-                        dcc.Dropdown(options=[{"label": i, "value": i} for i in ["GMT-5 (Lima)", "GMT-3 (Buenos Aires)"]], value="GMT-5 (Lima)")
-                    ])
-                ], className="g-4 mb-3"),
-                dbc.Button("Guardar Cambios", color="warning", className="text-white")
-            ])
-        ])
+        html.Div([
+            html.H1([
+                html.Span("⚙️", className="me-3"),
+                "Configuración Global"
+            ], className="display-6 fw-bold text-dark mb-0"),
+            html.P("Personaliza las configuraciones del sistema", className="text-muted fs-5 mb-0")
+        ], className="mb-5"),
+        
+        html.Div([
+            dbc.Row([
+                dbc.Col([
+                    html.Label("Idioma", className="form-label fw-medium"),
+                    dcc.Dropdown(
+                        options=[{"label": i, "value": i} for i in ["Español", "English"]], 
+                        value="Español",
+                        className="dropdown-modern"
+                    )
+                ]),
+                dbc.Col([
+                    html.Label("Zona Horaria", className="form-label fw-medium"),
+                    dcc.Dropdown(
+                        options=[{"label": i, "value": i} for i in ["GMT-5 (Lima)", "GMT-3 (Buenos Aires)"]], 
+                        value="GMT-5 (Lima)",
+                        className="dropdown-modern"
+                    )
+                ])
+            ], className="g-4 mb-4"),
+            
+            dbc.Button([
+                html.Span("💾", className="me-2"),
+                "Guardar Cambios"
+            ], className="btn-modern-primary px-4 py-3")
+        ], className="modern-card p-4")
     ])
 
 def content_benchmarking():
     return html.Div([
-        html.H1("Resultados de Benchmarking", className="text-dark fw-bold"),
-        dbc.Card([
-            dbc.CardHeader("Tabla de Resultados", className="text-warning fw-bold"),
-            dbc.CardBody([
-                dash_table.DataTable(
-                    id='benchmark-table',
-                    columns=[{"name": i, "id": i} for i in ["Modo", "Tiempo (ms)", "Speed-up"]], # Columnas iniciales
-                    data=[],
-                    page_size=10,
-                    style_table={'overflowX': 'auto', 'margin-top': '10px'},
-                    style_cell={'textAlign': 'left', 'padding': '5px'},
-                    style_header={
-                        'backgroundColor': 'rgb(230, 230, 230)',
-                        'fontWeight': 'bold'
-                    }
-                )
-            ])
-        ]),
-        dbc.Card([
-            dbc.CardHeader("Gráfico de Speed-up", className="text-warning fw-bold"),
-            dbc.CardBody([
-                html.Iframe(
-                    id='benchmark-plot-iframe',
-                    src='/output/benchmark_plot.html', # La ruta al archivo HTML del gráfico
-                    style={"height": "600px", "width": "100%", "border": "none"}
-                )
-            ])
-        ], className="mt-4")
+        html.Div([
+            html.H1([
+                html.Span("⚡", className="me-3"),
+                "Benchmarking"
+            ], className="display-6 fw-bold text-dark mb-0"),
+            html.P("Análisis de rendimiento y comparación de modos", className="text-muted fs-5 mb-0")
+        ], className="mb-5"),
+        
+        html.Div([
+            html.Div([
+                html.Span("📊", className="fs-2 text-success me-3"),
+                html.H4("Tabla de Resultados", className="mb-0 fw-bold")
+            ], className="d-flex align-items-center mb-4"),
+            
+            dash_table.DataTable(
+                id='benchmark-table',
+                columns=[{"name": i, "id": i} for i in ["Modo", "Tiempo (ms)", "Speed-up"]],
+                data=[],
+                page_size=10,
+                style_table={'overflowX': 'auto'},
+                style_cell={
+                    'textAlign': 'left', 
+                    'padding': '12px',
+                    'fontFamily': 'Inter, sans-serif',
+                    'border': '1px solid #e9ecef'
+                },
+                style_header={
+                    'backgroundColor': '#f8f9fa',
+                    'fontWeight': 'bold',
+                    'color': '#495057'
+                }
+            )
+        ], className="modern-card p-4 mb-4"),
+        
+        html.Div([
+            html.Div([
+                html.Span("📈", className="fs-2 text-info me-3"),
+                html.H4("Gráfico de Speed-up", className="mb-0 fw-bold")
+            ], className="d-flex align-items-center mb-4"),
+            
+            html.Iframe(
+                id='benchmark-plot-iframe',
+                src='/output/benchmark_plot.html',
+                style={"height": "600px", "width": "100%", "border": "none", "borderRadius": "10px"}
+            )
+        ], className="modern-card p-4")
     ])
 
 def content_ayuda():
     return html.Div([
-        html.H1("Ayuda y Documentación", className="text-dark fw-bold"),
+        html.Div([
+            html.H1([
+                html.Span("❓", className="me-3"),
+                "Ayuda y Documentación"
+            ], className="display-6 fw-bold text-dark mb-0"),
+            html.P("Encuentra respuestas y recursos para usar el sistema", className="text-muted fs-5 mb-0")
+        ], className="mb-5"),
+        
         dbc.Row([
-            dbc.Col(dbc.Card([
-                dbc.CardHeader("\U00002753 Guía de Usuario", className="text-warning fw-bold"),
-                dbc.CardBody([
-                    html.Ul([
-                        html.Li("Cómo crear una nueva evaluación"),
-                        html.Li("Configuración de parámetros"),
-                        html.Li("Interpretación de resultados"),
-                        html.Li("Exportación de datos")
+            dbc.Col([
+                html.Div([
+                    html.Div([
+                        html.Span("📚", className="fs-2 text-primary me-3"),
+                        html.H4("Guía de Usuario", className="mb-0 fw-bold")
+                    ], className="d-flex align-items-center mb-4"),
+                    
+                    html.Div([
+                        html.Div([
+                            html.Span("✅", className="me-3 text-success"),
+                            "Cómo crear una nueva evaluación"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("✅", className="me-3 text-success"),
+                            "Configuración de parámetros"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("✅", className="me-3 text-success"),
+                            "Interpretación de resultados"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("✅", className="me-3 text-success"),
+                            "Exportación de datos"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
                     ])
-                ])
-            ])),
-            dbc.Col(dbc.Card([
-                dbc.CardHeader("\U0001F4C4 Documentación Técnica", className="text-warning fw-bold"),
-                dbc.CardBody([
-                    html.Ul([
-                        html.Li("API de integración"),
-                        html.Li("Formatos de datos"),
-                        html.Li("Solución de problemas"),
-                        html.Li("Actualizaciones del sistema")
+                ], className="modern-card p-4 h-100")
+            ]),
+            dbc.Col([
+                html.Div([
+                    html.Div([
+                        html.Span("🔧", className="fs-2 text-warning me-3"),
+                        html.H4("Documentación Técnica", className="mb-0 fw-bold")
+                    ], className="d-flex align-items-center mb-4"),
+                    
+                    html.Div([
+                        html.Div([
+                            html.Span("🔗", className="me-3 text-info"),
+                            "API de integración"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("📄", className="me-3 text-info"),
+                            "Formatos de datos"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("🛠️", className="me-3 text-info"),
+                            "Solución de problemas"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
+                        html.Div([
+                            html.Span("🆕", className="me-3 text-info"),
+                            "Actualizaciones del sistema"
+                        ], className="guide-item p-3 mb-2 rounded-3"),
                     ])
-                ])
-            ]))
-        ], className="g-4 mt-2")
+                ], className="modern-card p-4 h-100")
+            ])
+        ], className="g-4")
     ])
 
 # Layout principal de la aplicación Dash
-dash_layout = dbc.Container([
-    dbc.Row(id="app-container", children=[
-        dbc.Col(id="sidebar-column", children=[
-            render_sidebar()
-        ], width=3, className="bg-white border-end border-warning"),
-        dbc.Col(id="page-content", children=[
-            render_header(),
-            html.Div(id="main-content", className="p-4")
-        ], width=9)
-    ])
-], fluid=True)
+dash_layout = html.Div([
+    # Estilos CSS personalizados
+    
+    dbc.Container([
+        dbc.Row([
+            dbc.Col([
+                render_sidebar()
+            ], width=3, className="sidebar-modern p-0"),
+            dbc.Col([
+                render_header(),
+                html.Div(id="main-content", className="p-4", style={'minHeight': 'calc(100vh - 80px)'})
+            ], width=9, className="p-0")
+        ], className="g-0")
+    ], fluid=True, className="p-0")
+], style={'background': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', 'minHeight': '100vh'})
