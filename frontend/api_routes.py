@@ -8,6 +8,7 @@ from datetime import datetime
 from frontend.utils.logger import Logger
 from frontend.config_utils import load_scoring_config
 from frontend.evaluation_logic import run_serial, run_openmp, run_cuda, run_pthreads
+from frontend.benchmark_logic import run_full_benchmark
 
 logger = Logger()
 
@@ -19,6 +20,9 @@ def setup_api_routes(app: FastAPI):
             key_content = await key_file.read()
 
             app.state.students_df = pd.read_excel(io.BytesIO(students_content))
+            # Renombrar la columna 'DNI' a 'student_id' para que coincida con la lógica de evaluación
+            if 'DNI' in app.state.students_df.columns:
+                app.state.students_df.rename(columns={'DNI': 'student_id'}, inplace=True)
             app.state.key_df = pd.read_excel(io.BytesIO(key_content))
             logger.log("INFO", "file_upload", "Archivos cargados exitosamente.", extra={"students_file": students_file.filename, "key_file": key_file.filename})
             return {"status": "ok"}
@@ -84,6 +88,15 @@ def setup_api_routes(app: FastAPI):
                 "average_blank": results_df['blank'].mean(),
             }
             logger.log("INFO", "execution", "Evaluación completada exitosamente.", extra={"mode": mode, "metrics": metrics, "rule_ids": ["RF-05", "RF-08"]})
+            
+            # Ejecutar el benchmark completo en segundo plano
+            try:
+                modes_to_run = ['serial', mode] if mode != 'serial' else ['serial']
+                run_full_benchmark(students_df, key_df['correct_answer'], scoring_rules, modes_to_run=modes_to_run)
+                logger.log("INFO", "benchmark", "Benchmark ejecutado y resultados actualizados.")
+            except Exception as e_benchmark:
+                logger.log("ERROR", "benchmark", f"Error al ejecutar el benchmark: {str(e_benchmark)}", extra={"error_details": str(e_benchmark)})
+
             return {"status": "ok", "results": results_json, "metrics": metrics}
         except Exception as e:
             logger.log("ERROR", "execution", f"Error durante la evaluación: {str(e)}", extra={"error_details": str(e), "rule_id": "RF-08"})
@@ -156,11 +169,11 @@ def setup_api_routes(app: FastAPI):
     @app.get("/benchmark/data")
     async def get_benchmark_data():
         try:
-            df = pd.read_csv("data/benchmark.csv")
+            df = pd.read_csv("data/benchmark_summary.csv")
             return {"status": "ok", "data": df.to_dict(orient='records')}
         except FileNotFoundError:
-            logger.log("ERROR", "benchmark_data", "Archivo data/benchmark.csv no encontrado.")
-            return {"status": "error", "message": "Archivo data/benchmark.csv no encontrado."}, 404
+            logger.log("ERROR", "benchmark_data", "Archivo data/benchmark_summary.csv no encontrado.")
+            return {"status": "error", "message": "Archivo data/benchmark_summary.csv no encontrado."}, 404
         except Exception as e:
             logger.log("ERROR", "benchmark_data", f"Error al leer benchmark.csv: {str(e)}")
             return {"status": "error", "message": f"Error al leer benchmark.csv: {str(e)}"}, 500

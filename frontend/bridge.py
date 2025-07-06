@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from starlette.middleware.wsgi import WSGIMiddleware
+from starlette.staticfiles import StaticFiles # Importar StaticFiles
 from dash import Dash
 import dash_bootstrap_components as dbc
 from frontend.utils.logger import Logger
@@ -16,6 +17,9 @@ dash_app.title = "Sistema de Evaluación"
 
 # Montar la aplicación Dash en FastAPI
 app.mount("/dash", WSGIMiddleware(dash_app.server))
+
+# Montar la carpeta de assets para servir archivos estáticos
+app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
 # Configurar rutas de la API
 setup_api_routes(app)

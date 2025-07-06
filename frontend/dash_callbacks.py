@@ -1,11 +1,17 @@
 import dash
-from dash import html, dcc, Input, Output, State
+from dash import html, dcc, Input, Output, State, callback_context
 import requests
 import base64
 import io
 import pandas as pd
 import plotly.express as px
+import time
 import json # Importar json para la función save_config
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib import colors
+from io import BytesIO
 
 # Importar load_scoring_config para asegurar que esté disponible
 from frontend.config_utils import load_scoring_config
@@ -73,18 +79,151 @@ def setup_dash_callbacks(dash_app):
                         html.P(f"Respuestas en Blanco Promedio: {metrics.get('average_blank'):.2f}"),
                     ])
 
-                    scores = [res['score'] for res in results]
+                    # Convertir resultados a DataFrame para manipulación
+                    df_results = pd.DataFrame(results)
+
+                    # Añadir columna 'ID' como índice + 1
+                    df_results.insert(0, 'ID', range(1, 1 + len(df_results)))
+
+                    # Renombrar 'student_id' a 'DNI'
+                    df_results.rename(columns={'student_id': 'DNI'}, inplace=True)
+
+                    # Reordenar columnas para que DNI esté después de ID
+                    # Asegurarse de que todas las columnas esperadas estén presentes antes de reordenar
+                    # Lista de columnas esperadas en el orden deseado
+                    ordered_columns = ['ID', 'DNI', 'score', 'correct', 'wrong', 'blank']
+                    # Filtrar las columnas que realmente existen en el DataFrame
+                    existing_ordered_columns = [col for col in ordered_columns if col in df_results.columns]
+                    df_results = df_results[existing_ordered_columns]
+
+                    metrics_display = html.Div([
+                        html.P(f"Total de Estudiantes: {metrics.get('total_students')}"),
+                        html.P(f"Puntuación Promedio: {metrics.get('average_score'):.2f}"),
+                        html.P(f"Respuestas Correctas Promedio: {metrics.get('average_correct'):.2f}"),
+                        html.P(f"Respuestas Incorrectas Promedio: {metrics.get('average_wrong'):.2f}"),
+                        html.P(f"Respuestas en Blanco Promedio: {metrics.get('average_blank'):.2f}"),
+                    ])
+
+                    scores = df_results['score'].tolist() # Usar la columna 'score' del DataFrame
                     if scores:
                         fig = px.histogram(x=scores, nbins=20, title="Distribución de Puntuaciones")
                     else:
                         fig = {} # Empty figure if no data
 
-                    return results, metrics_display, fig, html.Div("Evaluación completada exitosamente.")
+                    # Convertir el DataFrame de nuevo a formato de lista de diccionarios para Dash DataTable
+                    return df_results.to_dict(orient='records'), metrics_display, fig, html.Div("Evaluación completada exitosamente.")
                 else:
                     return [], html.Div(), {}, html.Div(f"Error en la evaluación: {response_data.get('message', 'Error desconocido')}", style={'color': 'red'})
             except Exception as e:
                 return [], html.Div(), {}, html.Div(f"Error en el procesamiento de evaluación: {str(e)}", style={'color': 'red'})
         return [], html.Div(), {}, html.Div("Presione 'Iniciar Evaluación' para ver los resultados.")
+
+
+    @dash_app.callback(
+        Output("download-dataframe-csv", "data"),
+        Input("download-results-button", "n_clicks"),
+        State("results-table", "data"),
+        prevent_initial_call=True,
+    )
+    def download_results_as_csv(n_clicks, table_data):
+        if not n_clicks or not table_data:
+            raise dash.exceptions.PreventUpdate
+
+        df = pd.DataFrame(table_data)
+        
+        # Eliminar la columna 'ID' antes de guardar si no es necesaria en el CSV final
+        if 'ID' in df.columns:
+            df = df.drop(columns=['ID'])
+
+        return dcc.send_data_frame(df.to_csv, "resultados_evaluacion.csv", index=False)
+
+    @dash_app.callback(
+        Output("download-dataframe-pdf", "data"),
+        Input("download-pdf-button", "n_clicks"),
+        State("results-table", "data"),
+        State("results-table", "columns"),
+        prevent_initial_call=True,
+    )
+    def download_results_as_pdf(n_clicks, table_data, table_columns):
+        if not n_clicks or not table_data:
+            raise dash.exceptions.PreventUpdate
+
+        buffer = BytesIO()
+        doc = SimpleDocTemplate(buffer, pagesize=letter)
+        styles = getSampleStyleSheet()
+        
+        # Preparar los datos para la tabla PDF
+        header = [col["name"] for col in table_columns]
+        data = [header] + [[row[col["id"]] for col in table_columns] for row in table_data]
+
+        table = Table(data)
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)
+        ]))
+
+        elements = [Paragraph("Resultados de la Evaluación", styles['h1']), table]
+        doc.build(elements)
+
+        buffer.seek(0)
+        return dcc.send_bytes(buffer.getvalue(), "resultados_evaluacion.pdf")
+    @dash_app.callback(
+        [Output('tab-upload-files-content', 'style'),
+         Output('tab-select-mode-content', 'style'),
+         Output('tab-results-dashboard-content', 'style')],
+        [Input('tab-upload-files-nav', 'n_clicks'),
+         Input('tab-select-mode-nav', 'n_clicks'),
+         Input('tab-results-dashboard-nav', 'n_clicks')]
+    )
+    def display_tab_content(n_clicks_upload, n_clicks_mode, n_clicks_results):
+        ctx = callback_context
+        if not ctx.triggered:
+            # Valor por defecto: mostrar la primera pestaña
+            return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if button_id == 'tab-upload-files-nav':
+            return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+        elif button_id == 'tab-select-mode-nav':
+            return {'display': 'none'}, {'display': 'block'}, {'display': 'none'}
+        elif button_id == 'tab-results-dashboard-nav':
+            return {'display': 'none'}, {'display': 'none'}, {'display': 'block'}
+        
+        # Fallback en caso de que algo inesperado ocurra
+        return {'display': 'block'}, {'display': 'none'}, {'display': 'none'}
+
+
+    @dash_app.callback(
+        [Output('tab-upload-files-nav', 'active'),
+         Output('tab-select-mode-nav', 'active'),
+         Output('tab-results-dashboard-nav', 'active')],
+        [Input('tab-upload-files-nav', 'n_clicks'),
+         Input('tab-select-mode-nav', 'n_clicks'),
+         Input('tab-results-dashboard-nav', 'n_clicks')]
+    )
+    def update_tab_nav_links_active(n_clicks_upload, n_clicks_mode, n_clicks_results):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            # Valor por defecto: activar la primera pestaña
+            return True, False, False
+
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if button_id == 'tab-upload-files-nav':
+            return True, False, False
+        elif button_id == 'tab-select-mode-nav':
+            return False, True, False
+        elif button_id == 'tab-results-dashboard-nav':
+            return False, False, True
+        
+        # Fallback
+        return True, False, False
 
 
     @dash_app.callback(
@@ -204,7 +343,9 @@ def setup_dash_callbacks(dash_app):
     def load_benchmark_data(n_clicks):
         if n_clicks: # Activado cuando se hace clic en la pestaña Benchmarking
             try:
-                response = requests.get("http://127.0.0.1:8000/benchmark/data")
+                # Cache busting by adding a timestamp
+                timestamp = int(time.time())
+                response = requests.get(f"http://127.0.0.1:8000/benchmark/data?_={timestamp}")
                 response_data = response.json()
                 if response_data.get("status") == "ok":
                     # Convertir tiempos a milisegundos y redondear speed-up
@@ -214,6 +355,8 @@ def setup_dash_callbacks(dash_app):
                         df['Speed-up'] = df['speed_up'].round(2)
                         # Seleccionar y reordenar columnas para la tabla
                         df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']]
+                        df_display = df[['mode', 'Tiempo (ms)', 'Speed-up']].copy()
+                        df_display.rename(columns={'mode': 'Modo'}, inplace=True)
                         return df_display.to_dict(orient='records')
                     return []
                 else:
@@ -224,44 +367,45 @@ def setup_dash_callbacks(dash_app):
                 return []
         return dash.no_update
 
+    @dash_app.callback(
+        Output('benchmark-plot-iframe', 'src'),
+        Input('nav-benchmarking', 'n_clicks')
+    )
+    def update_benchmark_plot(n_clicks):
+        if n_clicks:
+            timestamp = int(time.time())
+            return f'/output/benchmark_plot.html?_={timestamp}'
+        return dash.no_update
+
+    # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
     # Callback para manejar la activación/desactivación de la clase 'active' en los NavLink
     @dash_app.callback(
         [Output(f"nav-{item['id']}", "active") for item in nav_items],
         [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
-        [State(f"nav-{item['id']}", "active") for item in nav_items]
     )
-    def toggle_active_nav_link(*args):
+    def toggle_active_nav_link(*n_clicks_args):
         ctx = dash.callback_context
         if not ctx.triggered:
-            # Por defecto, activar la primera pestaña al inicio
             active_states = [False] * len(nav_items)
-            active_states[0] = True
+            active_states[0] = True # Activar la primera pestaña por defecto
             return active_states
         
-        # Obtener el ID del botón que disparó el callback
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
-        
-        # Crear una lista de estados activos, inicialmente todos falsos
         active_states = [False] * len(nav_items)
-        
-        # Encontrar el índice del elemento de navegación que disparó el callback
-        # y establecer su estado activo en True
         for i, item in enumerate(nav_items):
             if f"nav-{item['id']}" == button_id:
                 active_states[i] = True
                 break
-                
         return active_states
 
-    # Callback para mostrar el contenido principal según la selección del sidebar
     @dash_app.callback(
         Output("main-content", "children"),
         [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
     )
-    def display_content(*args):
+    def display_content(*n_clicks_args):
         ctx = dash.callback_context
         if not ctx.triggered:
-            # Valor por defecto al cargar la página
+            # Al cargar la página, mostrar el contenido de la primera pestaña por defecto
             return content_evaluacion()
         
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
