@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 import os
 import plotly.express as px
-from frontend.benchmark_logic import run_full_benchmark
+from frontend.benchmark_logic import run_full_benchmark, generate_benchmark_plot
 from frontend.config_utils import load_scoring_config
 import pyevalcore # Necesario para ScoringRule si se usa en create_sample_data
 
