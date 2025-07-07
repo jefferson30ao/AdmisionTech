@@ -39,10 +39,11 @@ def render_sidebar():
                 html.H4("AdmisionTech", className="mb-1 fw-bold text-white"),
                 html.Small("Sistema de Evaluación", className="text-white-50")
             ], className="text-center py-4")
-        ], className="bg-gradient text-white", style={
-            'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        ], className="bg-gradient", style={
+            'background': '#343a40',
             'borderRadius': '0 0 20px 20px',
-            'marginBottom': '2rem'
+            'marginBottom': '2rem',
+            'color': 'white'
         }),
         
         # Navegación
@@ -71,11 +72,17 @@ def render_header():
     return html.Div([
         dbc.Row([
             dbc.Col([
+                html.Button(
+                    html.Span("☰", className="navbar-toggler-icon"),
+                    id="sidebar-toggle",
+                    className="btn btn-link text-secondary me-3",
+                    style={'fontSize': '1.5rem', 'border': 'none', 'background': 'transparent'}
+                ),
                 html.Div([
                     html.H3("AdmisionTech", className="mb-0 fw-bold text-primary"),
                     html.Small("Sistema de Evaluación Inteligente", className="text-muted")
-                ])
-            ]),
+                ], className="d-inline-block align-middle")
+            ], width="auto", className="d-flex align-items-center"),
             dbc.Col([
                 html.Div([
                     dbc.Badge([
@@ -640,11 +647,11 @@ dash_layout = html.Div([
         dbc.Row([
             dbc.Col([
                 render_sidebar()
-            ], width=3, className="sidebar-modern p-0"),
+            ], id="sidebar-column", width=3, className="sidebar-modern p-0"),
             dbc.Col([
                 render_header(),
-                html.Div(id="main-content", className="p-4", style={'minHeight': 'calc(100vh - 80px)'})
-            ], width=9, className="p-0")
+                html.Div(id="page-content", className="p-4", style={'minHeight': 'calc(100vh - 80px)'})
+            ], id="page-content-column", width=9, className="p-0")
         ], className="g-0")
     ], fluid=True, className="p-0")
 ], style={'background': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', 'minHeight': '100vh'})

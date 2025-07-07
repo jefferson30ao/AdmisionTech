@@ -399,7 +399,7 @@ def setup_dash_callbacks(dash_app):
         return active_states
 
     @dash_app.callback(
-        Output("main-content", "children"),
+        Output("page-content", "children"),
         [Input(f"nav-{item['id']}", "n_clicks") for item in nav_items],
     )
     def display_content(*n_clicks_args):
@@ -427,13 +427,14 @@ def setup_dash_callbacks(dash_app):
     @dash_app.callback(
         Output("sidebar-column", "width"),
         Output("sidebar-column", "style"),
-        Output("page-content", "width"),
+        Output("page-content-column", "width"),
         Input("sidebar-toggle", "n_clicks"),
         State("sidebar-column", "width"),
-        State("sidebar-column", "style")
     )
-    def toggle_sidebar(n_clicks, current_width, current_style):
-        if n_clicks and n_clicks % 2 != 0: # Si n_clicks es impar, ocultar sidebar
-            return 0, {'display': 'none'}, 12
-        else: # Si n_clicks es par (o inicial), mostrar sidebar
-            return 3, {'display': 'block'}, 9
+    def toggle_sidebar(n_clicks, current_width):
+        if n_clicks:
+            if current_width == 3:
+                return 0, {'display': 'none'}, 12
+            else:
+                return 3, {'display': 'block'}, 9
+        return 3, {'display': 'block'}, 9

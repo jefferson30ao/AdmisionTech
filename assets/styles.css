@@ -194,6 +194,6 @@ body {
 }
 
 .sidebar-modern {
-    background: white;
+    background: #343a40; /* Color de fondo más oscuro para mejorar la visibilidad del texto */
     box-shadow: 4px 0 20px rgba(0,0,0,0.08);
 }
