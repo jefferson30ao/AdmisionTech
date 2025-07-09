@@ -1,6 +1,6 @@
-^C:\USERS\JEFY_\DOWNLOADS\ADMISIONTECH\BACKEND\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKELISTS.TXT
+^C:\USERS\JEFY_\DOCUMENTS\ADMISIONTECH\BACKEND\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jefy_/Downloads/AdmisionTech/backend/build/_deps/googletest-subbuild -BC:/Users/jefy_/Downloads/AdmisionTech/backend/build/_deps/googletest-subbuild --check-stamp-file C:/Users/jefy_/Downloads/AdmisionTech/backend/build/_deps/googletest-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jefy_/Documents/AdmisionTech/backend/build/_deps/googletest-subbuild -BC:/Users/jefy_/Documents/AdmisionTech/backend/build/_deps/googletest-subbuild --check-stamp-file C:/Users/jefy_/Documents/AdmisionTech/backend/build/_deps/googletest-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

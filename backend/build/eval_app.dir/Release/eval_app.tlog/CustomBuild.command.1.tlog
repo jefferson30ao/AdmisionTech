@@ -1,0 +1,10 @@
+^C:\USERS\JEFY_\DOCUMENTS\ADMISIONTECH\BACKEND\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jefy_/Documents/AdmisionTech/backend -BC:/Users/jefy_/Documents/AdmisionTech/backend/build --check-stamp-file C:/Users/jefy_/Documents/AdmisionTech/backend/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

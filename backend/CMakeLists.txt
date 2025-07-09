@@ -16,7 +16,7 @@ set(EVALCORE_SOURCES
     src/evaluator_serial.cpp
     src/evaluator_openmp.cpp
     src/evaluator_pthreads.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../src/evaluator_cuda.cu
+    src/evaluator_cuda.cu
 )
 
 add_library(evalcore STATIC ${EVALCORE_SOURCES})
@@ -53,6 +53,11 @@ FetchContent_Declare(
     GIT_TAG v1.16.0
 )
 FetchContent_MakeAvailable(googletest)
+
+# Test Serial
+add_executable(eval_app src/main_cli.cpp)
+target_link_libraries(eval_app PRIVATE evalcore OpenMP::OpenMP_CXX Threads::Threads CUDA::cudart)
+install(TARGETS eval_app RUNTIME DESTINATION bin)
 
 # Test Serial
 add_executable(test_serial ../tests/test_serial.cpp)

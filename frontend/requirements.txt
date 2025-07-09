@@ -7,3 +7,5 @@ numpy
 plotly
 openpyxl
 pybind11
+pyinstaller
+uvicorn

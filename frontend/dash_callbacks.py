@@ -39,7 +39,7 @@ def setup_dash_callbacks(dash_app):
                     'students_file': (students_filename, students_bytes, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'),
                     'key_file': (key_filename, key_bytes, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
                 }
-                response = requests.post("http://127.0.0.1:8000/upload", files=files)
+                response = requests.post("http://127.0.0.1:8050/upload", files=files)
                 response_data = response.json()
 
                 if response_data.get("status") == "ok":
@@ -64,7 +64,7 @@ def setup_dash_callbacks(dash_app):
                 data = {
                     'mode': mode
                 }
-                response = requests.post("http://127.0.0.1:8000/run", data=data)
+                response = requests.post("http://127.0.0.1:8050/run", data=data)
                 response_data = response.json()
 
                 if response_data.get("status") == "ok":
@@ -295,7 +295,7 @@ def setup_dash_callbacks(dash_app):
     def load_log_dates(n_clicks):
         if n_clicks: # Activado cuando se hace clic en la pestaña Historial
             try:
-                response = requests.get("http://127.0.0.1:8000/logs/list")
+                response = requests.get("http://127.0.0.1:8050/logs/list")
                 response_data = response.json()
                 dates = response_data.get("dates", [])
                 options = [{'label': date, 'value': date} for date in dates]
@@ -313,15 +313,15 @@ def setup_dash_callbacks(dash_app):
     def update_log_files_table(selected_date):
         if selected_date:
             try:
-                response = requests.get("http://127.0.0.1:8000/logs/list")
+                response = requests.get("http://127.0.0.1:8050/logs/list")
                 response_data = response.json()
                 files_by_date = response_data.get("files", {})
                 log_files = files_by_date.get(selected_date, [])
                 
                 data = []
                 for filename in log_files:
-                    download_jsonl_url = f"http://127.0.0.1:8000/logs/download/{selected_date}/{filename}"
-                    download_csv_url = f"http://127.0.0.1:8000/logs/download/{selected_date}/{filename}?format=csv"
+                    download_jsonl_url = f"http://127.0.0.1:8050/logs/download/{selected_date}/{filename}"
+                    download_csv_url = f"http://127.0.0.1:8050/logs/download/{selected_date}/{filename}?format=csv"
                     
                     data.append({
                         "filename": filename,
@@ -345,7 +345,7 @@ def setup_dash_callbacks(dash_app):
             try:
                 # Cache busting by adding a timestamp
                 timestamp = int(time.time())
-                response = requests.get(f"http://127.0.0.1:8000/benchmark/data?_={timestamp}")
+                response = requests.get(f"http://127.0.0.1:8050/benchmark/data?_={timestamp}")
                 response_data = response.json()
                 if response_data.get("status") == "ok":
                     # Convertir tiempos a milisegundos y redondear speed-up

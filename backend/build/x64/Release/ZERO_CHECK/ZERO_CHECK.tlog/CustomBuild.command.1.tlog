@@ -1,0 +1,10 @@
+^C:\USERS\JEFY_\DOCUMENTS\ADMISIONTECH\BACKEND\BUILD\CMAKEFILES\651F8B1AF31E22EC9D4B9F2BE20BD096\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jefy_/Documents/AdmisionTech/backend -BC:/Users/jefy_/Documents/AdmisionTech/backend/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jefy_/Documents/AdmisionTech/backend/build/evalcore.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

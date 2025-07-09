@@ -1,0 +1,38 @@
+Sistema de Evaluación Paralela - AdmisionTech
+==============================================
+"EJECUTABLE DE LA APLICACIÓN"
+==============================================
+
+Instrucciones de Uso
+--------------------
+
+1. Ejecutar la Aplicación:
+
+   - Haz doble clic en AdmisionTech.exe.
+   - Se abrirá una consola de comandos. Espera a que aparezca el mensaje "Uvicorn running on http://127.0.0.1:8050".
+   - Abre tu navegador web y ve a la dirección: http://127.0.0.1:8050/dash
+
+2. Casos de Uso de las Pestañas:
+
+   - Nueva Evaluación:
+     - Carga los archivos de Excel con las respuestas de los postulantes y la clave de respuestas.
+     - Selecciona el modo de evaluación: Serial, OpenMP, Pthreads, CUDA (este último solo se habilitará si tu dispositivo cuenta con la característica instalada).
+     - Inicia la evaluación y visualiza los resultados, métricas y un histograma de puntajes.
+
+   - Benchmarking:
+     - Muestra una comparativa de rendimiento (tiempo y speed-up) entre los diferentes modos de evaluación que se han ejecutado.
+
+Créditos y Licencia:
+--------------------
+
+Curso: Programación Paralela
+Docente: Jorge Luis Chávez Soto
+
+- Elaborado por: Grupo 7
+  - Asencios Ocaña, Jefferson Anthony
+  - Ortiz Herrera, Fabrizio Peter
+  - Siancas Ramírez, Milagros
+  - Cortez Híjar, Jeremi Axcel
+  - Paucar Zanabria, Zarina Carintia
+
+- Licencia: MIT License

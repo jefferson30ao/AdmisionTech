@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\jefy_\Downloads\AdmisionTech\backend\build\CMakeFiles\1000fc9cbacb1b8a7e42bdf6052f9e24\RUN_TESTS_force.rule">
+    <CustomBuild Include="C:\Users\jefy_\Documents\AdmisionTech\backend\build\CMakeFiles\a8e129e0b38812787862d79e40069ac9\RUN_TESTS_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{4358A064-B150-3D04-8373-B6CABDB824D1}</UniqueIdentifier>
+      <UniqueIdentifier>{E49FEBD8-D920-362E-9D93-B501D02F51F3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
